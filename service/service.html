@@ -8,6 +8,135 @@
   <link rel="stylesheet" href="service.css" />
 </head>
 <body>
+
+  <style>/* file: styles.css */
+:root{
+  --bg:#3b3b3f;
+  --bg-alt:#2f2f33;
+  --text:#e9e9ee;
+  --muted:#b9bbc4;
+  --field:#4a4a4f;
+  --field-border:#7b7d85;
+  --focus:#f7d54a;
+  --btn:#f7d54a;
+  --btn-text:#1a1a1a;
+  --radius:4px;
+  --gap:16px;
+  --max:860px;
+}
+
+html,body{
+  background:var(--bg-alt);
+  color:var(--text);
+  font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  margin:0;
+}
+
+.wrap{
+  max-width:var(--max);
+  margin-inline:auto;
+  padding:32px 20px 64px;
+}
+
+.panel{
+  background:var(--bg);
+  border-radius:8px;
+  padding:28px;
+  box-shadow:0 1px 0 rgba(0,0,0,.25) inset;
+}
+
+h1{
+  margin:0 0 8px 0;
+  font-size:34px;
+  font-weight:800;
+  letter-spacing:.2px;
+}
+
+.kicker{ font-size:13px; color:#c9c9cf; margin-bottom:8px; }
+.lead{ color:var(--muted); margin:0 0 26px 0; }
+
+form{ display:grid; grid-template-columns:1fr; gap:var(--gap); }
+
+.field label{
+  display:block;
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+
+input, select, textarea{
+  width:100%;
+  box-sizing:border-box;
+  padding:12px 12px;
+  border-radius:var(--radius);
+  border:1px solid var(--field-border);
+  background:var(--bg);
+  color:var(--text);
+  outline:none;
+  transition:border-color .15s ease, box-shadow .15s ease;
+}
+
+input::placeholder{ color:#9ca0aa; }
+
+select{
+  appearance:none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%),
+    linear-gradient(to right, transparent, transparent);
+  background-position:
+    calc(100% - 20px) calc(1.05em),
+    calc(100% - 15px) calc(1.05em),
+    calc(100% - 2.5em) .5em;
+  background-size:5px 5px,5px 5px,1px 1.8em;
+  background-repeat:no-repeat;
+  padding-right:40px;
+}
+
+input:focus, select:focus, textarea:focus{
+  border-color:var(--focus);
+  box-shadow:0 0 0 3px color-mix(in oklab, var(--focus) 35%, transparent);
+}
+
+.section-title{
+  font-weight:700;
+  font-size:18px;
+  margin-top:8px;
+  border-top:1px solid #565861;
+  padding-top:18px;
+}
+
+.row{ display:grid; grid-template-columns:1fr; gap:var(--gap); }
+@media (min-width:720px){
+  .row.two{ grid-template-columns:1fr 1fr; }
+  .row.split-30-70{ grid-template-columns:2fr 1fr; }
+}
+
+.btn{
+  display:inline-block;
+  background:var(--btn);
+  color:var(--btn-text);
+  border:none;
+  border-radius:6px;
+  padding:12px 26px;
+  font-weight:700;
+  letter-spacing:.2px;
+  cursor:pointer;
+  transition:transform .05s ease, filter .15s ease;
+}
+.btn:hover{ filter:brightness(.98); }
+.btn:active{ transform:translateY(1px); }
+
+.actions{ margin-top:8px; }
+
+.error{
+  min-height:0.9rem;
+  margin:6px 0 0 0;
+  color:#ffb3b3;
+  font-size:12px;
+}
+:focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+</style>
   <div class="wrap">
     <div class="panel">
       <div>
@@ -113,6 +242,44 @@
   </div>
 
 
-  <script src="service.js"></script>
+  <script >// file: app.js
+
+// Lightweight client-side validation and submit handler
+(function () {
+  const form = document.getElementById('serviceForm');
+  const requiredSelects = ['userKind', 'organPart'];
+
+  function setError(id, message = '') {
+    const p = document.querySelector(`.error[data-for="${id}"]`);
+    if (p) p.textContent = message;
+  }
+
+  function validateSelect(id) {
+    const el = document.getElementById(id);
+    const valid = el && el.value.trim() !== '';
+    setError(id, valid ? '' : 'Please make a selection');
+    return valid;
+  }
+
+  requiredSelects.forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener('change', () => validateSelect(id));
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const ok = requiredSelects.map(validateSelect).every(Boolean);
+    if (!ok) return;
+
+    // Collect values
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    // Demo: show as JSON, replace with real request as needed
+    alert('Submitted:\n' + JSON.stringify(data, null, 2));
+
+  });
+})();
+</script>
 </body>
 </html>
