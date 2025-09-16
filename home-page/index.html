@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Content Organs India</title>
-  <link rel="stylesheet" href="styles.css">
+  
   <link rel="stylesheet" href="../assets/css/responsive-overrides.css">
 </head>
 <body>
@@ -69,6 +69,53 @@ header {
   .menu-item{position:static} /* allow full-width fixed panel */
   .menu a{color:var(--text); text-decoration:none; font-weight:500; font-size:16px; padding:12px 0; line-height:1}
   .menu a:hover{color:var(--link-hover)}
+
+  /* Mobile hamburger button */
+  .nav-toggle{
+    display:none !important; /* hidden by default (desktop) */
+    background:transparent; border:0; color:var(--text);
+    width:56px; height:56px; border-radius:8px; align-items:center; justify-content:center;
+    cursor:pointer; position:relative; z-index:99999; touch-action:manipulation; -webkit-tap-highlight-color: transparent;
+    padding:8px; display:inline-flex; align-items:center; justify-content:center; pointer-events:auto;
+  }
+  .nav-toggle:focus{outline:2px solid var(--focus); outline-offset:2px}
+  .nav-toggle .hamburger{display:block; width:22px; height:2px; background:var(--text); position:relative}
+  .nav-toggle .hamburger::before, .nav-toggle .hamburger::after{content:""; position:absolute; left:0; right:0; height:2px; background:var(--text); transition:transform .18s ease, top .18s ease, opacity .12s ease}
+  .nav-toggle .hamburger::before{top:-7px}
+  .nav-toggle .hamburger::after{top:7px}
+  .nav-toggle[aria-expanded="true"] .hamburger{background:transparent}
+  .nav-toggle[aria-expanded="true"] .hamburger::before{transform:rotate(45deg) translate(3px,3px); top:0}
+  .nav-toggle[aria-expanded="true"] .hamburger::after{transform:rotate(-45deg) translate(3px,-3px); top:0}
+
+  /* Mobile menu overlay */
+  .mobile-menu-overlay{
+    display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:100000; backdrop-filter:blur(6px);
+    align-items:flex-start; justify-content:flex-end; padding:var(--nav-h) 12px 24px 12px;
+  }
+  .mobile-menu-overlay.open{display:flex}
+  .mobile-menu{
+    width:min(320px, 92%); background:var(--bg); color:var(--text); border-radius:10px; padding:18px; box-shadow:0 12px 40px rgba(0,0,0,.6);
+    max-height:calc(100vh - var(--nav-h) - 48px); overflow:auto;
+  }
+  .mobile-menu .menu{flex-direction:column; gap:8px}
+  .mobile-menu .menu a{display:block; padding:12px 8px; font-size:18px}
+  .mobile-menu .service-btn a{border-radius:6px}
+
+  /* Ensure copied mobile menus are readable */
+  .mobile-copy{ list-style:none; margin:0 0 12px 0; padding:0; display:block !important }
+  .mobile-copy a{ color:var(--text); display:block; padding:12px 10px; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.03) }
+  .mobile-menu{ background:linear-gradient(180deg, rgba(10,10,10,0.96), rgba(18,18,18,0.96)); }
+  .mobile-copy a:hover{ background:rgba(255,255,255,0.03) }
+
+  /* Hide the desktop menu on small screens and show hamburger */
+  @media (max-width:768px){
+    .menu{display:none !important}
+    /* show hamburger on mobile and place on the right */
+    .nav-toggle{display:flex !important; position:absolute; right:16px; top:50%; transform:translateY(-50%);}
+    .site-nav{position:relative}
+    .brand-text{font-size:20px}
+    .brand-logo-img{height:36px}
+  }
   
   /* Service button */
   .service-btn a{border:2px solid var(--text); padding:8px 20px; border-radius:4px; transition:.2s ease}
@@ -140,6 +187,25 @@ header {
     .menu{gap:20px}
     .mega-left{width:260px}
     .grid{grid-template-columns:repeat(2,1fr)}
+
+    /* Mobile overlay: make the menu full-width and high-contrast for readability */
+    .mobile-menu-overlay{ align-items:flex-start; justify-content:flex-start; padding:0; }
+    .mobile-menu{
+      width:100% !important;
+      max-width:none !important;
+      border-radius:0 !important;
+      padding:20px 18px !important;
+      box-shadow:none !important;
+      background:rgba(0,0,0,0.96) !important;
+      min-height:100vh;
+      overflow:auto;
+    }
+    .mobile-copy a{ font-size:20px !important; padding:14px 12px !important; color:#fff !important; }
+    .mobile-copy{ padding-top:18px }
+    /* ensure service button stands out */
+    .mobile-copy .service-btn a, .mobile-menu .service-btn a{ display:inline-block; margin:12px 0; border:2px solid #fff; color:#fff; padding:10px 14px; border-radius:6px }
+    /* make sure the overlay backdrop is visible behind the panel */
+    .mobile-menu-overlay.open{ background: rgba(0,0,0,0.6); }
   }
   @media (max-width:768px){
     .brand-text{font-size:24px; margin-left:30px}
@@ -1227,7 +1293,7 @@ header {
       
      
   
-       <nav class="site-nav" aria-label="Primary">
+       <nav class="site-nav" aria-label="Primary" id="primary-nav">
   <!-- Left: Brand -->
   <a class="brand" href="../home-page/index.html" aria-label="Content Organs">
   <div class="brand-container">
@@ -1235,6 +1301,10 @@ header {
     <img class="brand-logo-img" src="https://i.postimg.cc/xdLZ1t9c/Clef-Musicals-Logo.png" alt="Content logo">
   </div>
 </a>
+  <!-- Mobile hamburger (hidden on large screens) -->
+  <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+    <span class="hamburger"></span>
+  </button>
 
   <!-- Center: organ categories (unchanged dropdown content) -->
   <ul class="menu center-menu">
@@ -1477,6 +1547,97 @@ header {
   </nav>
 </section>
   </header>
+
+  <!-- Mobile overrides: center hero text, move category buttons off-left, ensure hamburger works -->
+  <style>
+  @media (max-width: 768px) {
+    /* Center hero content */
+  /* move headline lower on mobile so it sits nearer the center vertically */
+  .bh-wrap{ justify-items:center; text-align:center; margin-left:auto; margin-right:auto; max-width:92%; padding-top:22vh; padding-bottom:120px }
+    .bh-tags{ justify-content:center }
+    .bh-title{ margin:0 auto; text-align:center; max-width:24ch; font-size:2rem }
+
+  /* Pin category buttons inline at the bottom of the hero and center them */
+  /* place buttons left and slightly raised from bottom */
+  .bh-buttons{ position:absolute; left:12px; right:auto; bottom:60px; z-index:3; display:flex; flex-direction:column; gap:12px; justify-content:flex-start; align-items:flex-start; padding:0; box-sizing:border-box; }
+  .bh-btn{ min-width:120px; padding:10px 14px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,.32); background:rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.08) }
+    .bh-btn .bh-label{ font-size:16px }
+
+    /* Make sure hero image still covers but doesn't push content off-screen */
+    .bh-hero__img{ object-position:center center }
+  }
+  </style>
+
+  <script>
+  (function(){
+    // Quick, robust hamburger wiring in case other scripts run late or fail
+    var nav = document.getElementById('primary-nav');
+    if(!nav) return;
+    var toggle = nav.querySelector('.nav-toggle');
+    if(!toggle) return;
+
+    // Create overlay if missing
+    var overlay = document.querySelector('.mobile-menu-overlay');
+    function ensureOverlay(){
+      if(!overlay){
+        overlay = document.createElement('div');
+        overlay.className = 'mobile-menu-overlay';
+        overlay.innerHTML = '<div class="mobile-menu" id="mobile-menu" role="menu" aria-label="Mobile primary menu"></div>';
+        document.body.appendChild(overlay);
+      }
+    }
+    ensureOverlay();
+
+    toggle.addEventListener('click', function(e){
+      console.log('nav-toggle clicked (inline fallback)');
+      e.preventDefault();
+      if(overlay.classList.contains('open')){
+        overlay.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+        document.documentElement.style.overflow='';
+        return;
+      }
+
+      // Populate mobile menu from nav lists (rebuild to avoid empty clones)
+      var mobileMenu = overlay.querySelector('.mobile-menu');
+      mobileMenu.innerHTML = '';
+      // collect only top-level anchors inside each ul.menu to avoid megamenu content
+      var topLinks = nav.querySelectorAll('ul.menu > li > a');
+      if(topLinks.length){
+        var list = document.createElement('ul'); list.className = 'menu mobile-copy';
+        topLinks.forEach(function(a){
+          var li = document.createElement('li'); li.className = 'menu-item';
+          var link = document.createElement('a');
+          link.href = a.getAttribute('href') || '#';
+          link.textContent = a.textContent.trim();
+          link.setAttribute('role','menuitem');
+          li.appendChild(link);
+          list.appendChild(li);
+        });
+        mobileMenu.appendChild(list);
+      } else {
+        // fallback: collect any anchors in nav excluding mega panel content
+        var all = nav.querySelectorAll('a');
+        var list2 = document.createElement('ul'); list2.className = 'menu mobile-copy';
+        all.forEach(function(a){ if(!a.closest('.mega')){
+          var li = document.createElement('li'); li.className='menu-item';
+          var link = document.createElement('a'); link.href = a.getAttribute('href')||'#'; link.textContent = a.textContent.trim(); li.appendChild(link); list2.appendChild(li);
+        }});
+        if(list2.children.length) mobileMenu.appendChild(list2);
+      }
+
+      overlay.classList.add('open');
+      toggle.setAttribute('aria-expanded','true');
+      document.documentElement.style.overflow='hidden';
+      var first = mobileMenu.querySelector('a'); if(first) first.focus();
+    });
+
+    // Close handlers
+    overlay.addEventListener('click', function(e){ if(e.target===overlay){ overlay.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.documentElement.style.overflow=''; } });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && overlay.classList.contains('open')){ overlay.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.documentElement.style.overflow=''; } });
+    overlay.addEventListener('click', function(e){ var a = e.target.closest('a'); if(a && overlay.classList.contains('open')){ setTimeout(function(){ overlay.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.documentElement.style.overflow=''; }, 200); } });
+  })();
+  </script>
  
 
 <!-- HERO TILES COMPONENT -->
@@ -2147,6 +2308,93 @@ function initFavoritesCarousel() {
 }
 
 //---------------------------------------------------------------------------------------------------
+// MOBILE NAV (hamburger)
+//---------------------------------------------------------------------------------------------------
+function initMobileNav(){
+  console.log('initMobileNav called');
+  var nav = document.getElementById('primary-nav');
+  if(!nav) return;
+  var toggle = nav.querySelector('.nav-toggle');
+
+  // Create overlay container only once
+  var overlay = document.querySelector('.mobile-menu-overlay');
+  if(!overlay){
+    overlay = document.createElement('div');
+    overlay.className = 'mobile-menu-overlay';
+    overlay.innerHTML = '<div class="mobile-menu" id="mobile-menu" role="menu" aria-label="Mobile primary menu"></div>';
+    document.body.appendChild(overlay);
+  }
+
+  var mobileMenu = overlay.querySelector('.mobile-menu');
+  // Clone the desktop menus into mobile menu when opened (keep source links only)
+  function populate(){
+    mobileMenu.innerHTML = '';
+    var topLinks = nav.querySelectorAll('ul.menu > li > a');
+    if(topLinks.length){
+      var list = document.createElement('ul'); list.className = 'menu mobile-copy';
+      topLinks.forEach(function(a){
+        var li = document.createElement('li'); li.className = 'menu-item';
+        var link = document.createElement('a');
+        link.href = a.getAttribute('href') || '#';
+        link.textContent = a.textContent.trim();
+        link.setAttribute('role','menuitem');
+        li.appendChild(link);
+        list.appendChild(li);
+      });
+      mobileMenu.appendChild(list);
+    } else {
+      var all = nav.querySelectorAll('a');
+      var list2 = document.createElement('ul'); list2.className='menu mobile-copy';
+      all.forEach(function(a){ if(!a.closest('.mega')){ var li=document.createElement('li'); li.className='menu-item'; var link=document.createElement('a'); link.href=a.getAttribute('href')||'#'; link.textContent=a.textContent.trim(); li.appendChild(link); list2.appendChild(li); }});
+      if(list2.children.length) mobileMenu.appendChild(list2);
+    }
+  }
+
+  function open(){
+    populate();
+    overlay.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    document.documentElement.style.overflow = 'hidden';
+    // focus first link
+    var first = mobileMenu.querySelector('a'); if(first) first.focus();
+  }
+  function close(){
+    overlay.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    document.documentElement.style.overflow = '';
+    toggle.focus();
+  }
+
+  // Toggle handler
+  if(toggle){
+    toggle.addEventListener('click', function(e){
+      console.log('nav-toggle clicked (initMobileNav)');
+      e.preventDefault();
+      if(overlay.classList.contains('open')) close(); else open();
+    });
+  }
+
+  // Close when clicking backdrop
+  overlay.addEventListener('click', function(e){
+    if(e.target === overlay) close();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && overlay.classList.contains('open')) close();
+  });
+
+  // Close on any link click inside menu
+  overlay.addEventListener('click', function(e){
+    var el = e.target.closest('a');
+    if(el && overlay.classList.contains('open')){
+      // small delay for navigation
+      setTimeout(close, 200);
+    }
+  });
+}
+
+//---------------------------------------------------------------------------------------------------
 // INITIALIZE ALL CAROUSELS
 //---------------------------------------------------------------------------------------------------
 
@@ -2157,6 +2405,8 @@ document.addEventListener('DOMContentLoaded', function() {
   initAboutCarousel();
   initShowcaseSlider();
   initFavoritesCarousel();
+  // Initialize mobile nav
+  if (typeof initMobileNav === 'function') initMobileNav();
   
   console.log('All carousels initialized');
 });
