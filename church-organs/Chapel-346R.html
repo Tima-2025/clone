@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Organs - Chapel 346R</title>
+<style>
+  /* Reset base margins and paddings */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 40px;
+  }
+  a {
+    color: #0a3c5d;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    color: #0a3c5d;
+    font-weight: 700;
+  }
+  header p.intro {
+    font-style: italic;
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 720px;
+    margin: 15px auto 0 auto;
+  }
+  .image-container {
+    text-align: center;
+    margin: 25px 0 40px;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
+  }
+  section {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+  }
+  section h2 {
+    font-size: 1.9rem;
+    color: #0a3c5d;
+    border-left: 6px solid #f4a300;
+    padding-left: 14px;
+    margin-bottom: 25px;
+  }
+  section h3 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #0a3c5d;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  p, ul {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  ul li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .highlight {
+    background-color: #f9f9f9;
+    border-left: 6px solid #f4a300;
+    padding: 18px 20px;
+    margin-bottom: 30px;
+  }
+  footer {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    section h2 {
+      font-size: 1.5rem;
+    }
+    section h3 {
+      font-size: 1.15rem;
+    }
+    p, ul {
+      font-size: 0.95rem;
+    }
+    .container {
+      padding: 0 10px;
+      margin: 20px auto;
+    }
+  }
+    .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 40, 40, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+
+  .arrow:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+  
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Chapel 346R</h1>
+    <p class="intro">
+      The Chapel 346R is one of the 3-manual models at the top of our Chapel series. Thanks to an advanced software platform, the possibilities are virtually limitless. By easily expanding the number of channels or routing and switching voices to various channels, this organ has everything for optimal calibration and performance in your (church) space. Due to the many options available for expanding the organ, this model is one of the most installed church organs by Content.
+    </p>
+    <p>
+      Experience over 120 orchestral voices.
+    </p>
+  </header>
+
+  <div class="carousel-container">
+  <button class="arrow arrow-left" onclick="prevImage()">&#8592;</button>
+  <img class="carousel-image" id="carouselImage" src="https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3747_3840x2160.webp/chapel-346-cbm-161-right.webp" alt="Carousel Image"/>
+  <button class="arrow arrow-right" onclick="nextImage()">&#8594;</button>
+</div>
+
+  <section>
+    <h2>The organ as an orchestra</h2>
+    <p>
+      This model demonstrates that an organ can not only sound like an organ but can also come to life as an orchestra. With a standard built-in library of over 120 solo and orchestral voices, you can bring every musical style and sonic world to life. The usage of these voices depends entirely on the liturgical context. Whether it’s accompanying the choir with piano sounds or playing along with various solo voices in the ensemble, this Content Chapel has it all.
+    </p>
+  </section>
+
+   <div class="button-grid">
+  <button class="grid-button large two-line" type="button">
+    REQUEST<br>BROCHURE
+  </button>
+  <button class="grid-button large two-line" type="button">
+    FIND YOUR<br>DEALER
+  </button>
+  <button class="grid-button small" type="button">VIDEO</button>
+  <button class="grid-button small" type="button">SPECIFICATIONS</button>
+</div>
+
+  <section>
+    <h2>High-quality organ sound through multi-channel audio systems</h2>
+    <p>
+      "Quality is our most important stop." This promise is one that Content Organs is proud to uphold. An included 8-channel audio system can be expanded to as many as 32 separate audio channels, allowing for the highest quality and expansive tonal representation. Since each channel has various speakers, it is possible to fulfill the desire for "each speaker having a stop." This significantly enhances the carrying capacity of the instrument, especially when it comes to accompanying congregational or choral singing.
+    </p>
+  </section>
+
+  <section>
+    <h2>Your organ, a harmonious unity with your church</h2>
+    <p>
+      The sound of the Cantate 346 is generated based on a so-called dry and lifelike organ sample, combined with various possibilities such as beating, pitch, volume, and reverberation. The overall tonal color that emerges can be finely adjusted to the space by the organist (in consultation with the Content voicer) during installation. This is similar to the process of analog voicing and physical adjustment that takes place during the installation or revision of a pipe organ. In this way, the digital organ forms a harmonious unity with the church space, enhancing collaboration with singers, both collectively and as a unified presence in one space.
+    </p>
+  </section>
+
+  <section>
+    <h2>Specifications</h2>
+    <div class="highlight">
+      <ul>
+        <li>3 touch-sensitive keyboards</li>
+        <li>4 x 46 TAB stops</li>
+        <li>4 unique tonal styles</li>
+        <li>External speakers (monitor system optional)</li>
+        <li>Multi-channel audio system</li>
+        <li>Maximum flexible technical capabilities</li>
+        <li>Fully customizable voicing</li>
+        <li>Suitable for churches and halls with over 1000 attendees</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Stop list overview</h2>
+    
+    <h3>Pedal (11 stops)</h3>
+    <ul>
+      <li>Principal 16'</li>
+      <li>Subbas 16'</li>
+      <li>Octav 8'</li>
+      <li>Gedackt 8'</li>
+      <li>Octav 4'</li>
+      <li>Mixtur IV fach</li>
+      <li>Posaun 32'</li>
+      <li>Posaun 16'</li>
+      <li>Trommet 8'</li>
+      <li>Trommet 4'</li>
+      <li>Cornet 2'</li>
+      <li>Koppel Ped.-R.P.</li>
+      <li>Koppel Ped.-Werck</li>
+      <li>Koppel Ped.-O.P.</li>
+    </ul>
+
+    <h3>Ruck Positiv (10 stops)</h3>
+    <ul>
+      <li>Principal 8'</li>
+      <li>Gedackt 8'</li>
+      <li>Octav 4'</li>
+      <li>Blockfloit 4'</li>
+      <li>Octav 2'</li>
+      <li>Waldfloit 2'</li>
+      <li>Ziffloit 1 1/2'</li>
+      <li>Sexquialt II fach</li>
+      <li>Scharff IV fach</li>
+      <li>Dulcian 8'</li>
+      <li>Tremulant</li>
+      <li>Koppel R.P.-O.P.</li>
+    </ul>
+
+    <h3>Werck (12 stops)</h3>
+    <ul>
+      <li>Principal 16'</li>
+      <li>Quintadena 16'</li>
+      <li>Octav 8'</li>
+      <li>Hollfloit 8'</li>
+      <li>Octav 4'</li>
+      <li>Rohrfloit 4'</li>
+      <li>Super Octav 2'</li>
+      <li>Tertian II fach</li>
+      <li>Mixtur VI fach</li>
+      <li>Cimbel III fach</li>
+      <li>Trommet 16'</li>
+      <li>Trommet 8'</li>
+      <li>Tremulant</li>
+      <li>Koppel Werck-R.P.</li>
+      <li>Koppel Werck-O.P.</li>
+    </ul>
+
+    <h3>Ober Positiv (13 stops)</h3>
+    <ul>
+      <li>Principal 8'</li>
+      <li>Rohrfloit 8'</li>
+      <li>Quintadena 8'</li>
+      <li>Quinta 6'</li>
+      <li>Octav 4'</li>
+      <li>Spitzfloit 4'</li>
+      <li>Nasat 3'</li>
+      <li>Flachfloit 2'</li>
+      <li>Rauschpfeiffe II fach</li>
+      <li>Scharff V fach</li>
+      <li>Dulcian 16'</li>
+      <li>Trommet 8'</li>
+      <li>Vox Humana 8'</li>
+      <li>Tremulant</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Content Organs - All rights reserved</p>
+  </footer>
+</div>
+<script>
+  const images = [
+    "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3747_3840x2160.webp/chapel-346-cbm-161-right.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3748_3840x2160.webp/chapel-346-cbm-161-front.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3746_3840x2160.webp/chapel-346-cbm-161-left.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3745_3840x2160.webp/chapel-346-cbm-161-detail-1.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3744_3840x2160.webp/chapel-346-cbm-161-detail-2.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3743_3840x2160.webp/chapel-346-cbm-161-detail-3.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3742_3840x2160.webp/chapel-346-cbm-161-detail-4.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3741_3840x2160.webp/chapel-346-cbm-161-detail-5.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3740_3840x2160.webp/chapel-346-cbm-161-detail-6.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3739_3840x2160.webp/chapel-346-cbm-161-detail-7.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/3738_3840x2160.webp/chapel-346-cbm-161-detail-8.webp"
+  ];
+
+  let currentIndex = 0;
+  const carouselImage = document.getElementById('carouselImage');
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length ;
+    showImage(currentIndex);
+  }
+   const btn = document.getElementById('showListBtn');
+  const list = document.getElementById('itemList');
+
+  btn.addEventListener('click', () => {
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';  // Show list
+      //btn.textContent = 'Hide Items'; // Change button text
+    } else {
+      list.style.display = 'none';   // Hide list
+      //btn.textContent = 'Show Items'; // Reset button text
+    }
+  });
+
+
+  // Optional JavaScript functionality can be added here if needed
+  // For example, click actions on buttons:
+  const buttons = document.querySelectorAll('.grid-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`You clicked "${btn.textContent.replace('\n',' ')}" button.`);
+    });
+  });
+</script>
+
+</body>
+</html>

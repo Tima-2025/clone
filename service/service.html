@@ -1,0 +1,115 @@
+<!-- file: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Service request</title>
+  <link rel="stylesheet" href="service.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel">
+      <div>
+        <div class="kicker">Content inlog</div>
+        <h1>Service request</h1>
+        <p class="lead">
+          Welcome to our Content Customer Platform. You can log in here using the serial number you received upon the delivery of your organ as both your username and password. Please make sure to change this after logging in.
+        </p>
+      </div>
+
+      <form id="serviceForm" novalidate>
+        <div class="field">
+          <label for="userKind">What kind of user are you?</label>
+          <select id="userKind" name="userKind" required>
+            <option value="" selected>- Make a choice</option>
+            <option>End user</option>
+            <option>Repair technician</option>
+            <option>Dealer</option>
+          </select>
+          <p class="error" data-for="userKind"></p>
+        </div>
+
+        <div class="field">
+          <label for="organPart">What part of the organ does your problem relate to?</label>
+          <select id="organPart" name="organPart" required>
+            <option value="" selected>- Make a choice</option>
+            <option>Organ furniture and finishing</option>
+            <option>Audio and/or engineering</option>
+            <option>Manuals</option>
+            <option>Pedal</option>
+          </select>
+          <p class="error" data-for="organPart"></p>
+        </div>
+
+        <div class="row two">
+          <div class="field">
+            <label for="typeNumber">Type number of organ</label>
+            <input id="typeNumber" name="typeNumber" type="text" placeholder="TYPE NUMBER OF ORGAN" />
+          </div>
+          <div class="field">
+            <label for="serialNumber">Serial number of organ</label>
+            <input id="serialNumber" name="serialNumber" type="text" placeholder="SERIAL NUMBER OF ORGAN" />
+          </div>
+        </div>
+
+        <div class="section-title">Persoonsgegevens</div>
+
+        <div class="row two">
+          <div class="field">
+            <label for="firstName">Name</label>
+            <input id="firstName" name="firstName" type="text" placeholder="NAME" />
+          </div>
+          <div class="field">
+            <label for="surname">Surname</label>
+            <input id="surname" name="surname" type="text" placeholder="SURNAME" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="country">Land</label>
+          <input id="country" name="country" type="text" placeholder="LAND" />
+        </div>
+
+        <div class="row split-30-70">
+          <div class="field">
+            <label for="street">Street</label>
+            <input id="street" name="street" type="text" placeholder="STREET" />
+          </div>
+          <div class="field">
+            <label for="houseNumber">House number</label>
+            <input id="houseNumber" name="houseNumber" type="text" placeholder="HOUSE NUMBER" />
+          </div>
+        </div>
+
+        <div class="row two">
+          <div class="field">
+            <label for="postal">Postal code</label>
+            <input id="postal" name="postal" type="text" placeholder="POSTAL CODE" />
+          </div>
+          <div class="field">
+            <label for="city">City</label>
+            <input id="city" name="city" type="text" placeholder="CITY" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="phone">Telephone number</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="TELEPHONE NUMBER" />
+        </div>
+
+        <div class="field">
+          <label for="email">E-mailaddress</label>
+          <input id="email" name="email" type="email" placeholder="E-MAILADDRESS" />
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="service.js"></script>
+</body>
+</html>

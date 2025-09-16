@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Organs - Celeste 236</title>
+<style>
+  /* Reset and base styles */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.5;
+  }
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+  }
+  header h1 {
+    color: #0a3c5d;
+    font-weight: 700;
+    font-size: 2.4rem;
+  }
+  header p {
+    margin-top: 15px;
+    font-style: italic;
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+  }
+  .image-container {
+    text-align: center;
+    margin: 30px 0 40px;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  }
+  section {
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section h2 {
+    color: #0a3c5d;
+    border-left: 6px solid #f4a300;
+    padding-left: 12px;
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+  }
+  p, ul {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  ul li {
+    margin-bottom: 8px;
+  }
+  .highlight {
+    background-color: #f9f9f9;
+    border-left: 6px solid #f4a300;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+  }
+  footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding-bottom: 20px;
+    border-top: 1px solid #ddd;
+  }
+  a {
+    color: #0a3c5d;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+    section h2 {
+      font-size: 1.4rem;
+    }
+    .container {
+      padding: 0 10px;
+      margin: 20px auto;
+    }
+  }
+  .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 40, 40, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+
+  .arrow:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Celeste 236</h1>
+    <p>The Content Celeste 236 is the most popular two-manual home organ from Content Organs! Thanks to the in-house developed Invention Technology®, it provides samples from no less than four unique sound worlds. Switch effortlessly between a German Baroque organ, a French Cavaillé-Coll organ, or one of the beautiful Dutch organs with just a button press. The touch of the standard built-in plastic keyboards with metal cores completes the experience.</p>
+  </header>
+
+ <div class="carousel-container">
+  <button class="arrow arrow-left" onclick="prevImage()">&#8592;</button>
+  <img class="carousel-image" id="carouselImage" src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5343_370x310_autocrop.webp/compact-224.webp" alt="Carousel Image"/>
+  <button class="arrow arrow-right" onclick="nextImage()">&#8594;</button>
+</div>
+
+  <section>
+    <h2>Built-in 3D Surround Sound System</h2>
+    <p>The Celeste 236 comes standard with an impressive built-in 3D surround system featuring 14 speakers placed across various positions in the solid oak cabinet. This advanced setup creates a lifelike spatial audio experience without the need for external speakers.</p>
+    <p>The Virtual Player Position feature lets you experience your playing from different perspectives within a church setting—behind the console, in front of the organ façade, or further in the nave—achieved simply by pressing a button, thanks to the Content Convolution Reverb with over 10 unique reverbs.</p>
+  </section>
+
+  <section>
+    <h2>Four Unique Organ Styles</h2>
+    <p>The organ features four distinct traditional organ sound worlds, allowing authentic performance of organ literature across centuries:</p>
+    <ul>
+      <li><strong>North German Baroque:</strong> Ideal for music by Bach, featuring bright, articulate sounds.</li>
+      <li><strong>French Romantic:</strong> Suitable for composers such as Widor, Guilmant, and Franck.</li>
+      <li><strong>Dutch organ style:</strong> Crafted for the full Dutch chorale repertoire.</li>
+      <li><strong>Additional unique sound world</strong> to expand tonal possibilities.</li>
+    </ul>
+  </section>
+
+   <div class="button-grid">
+  <button class="grid-button large two-line" type="button">
+    REQUEST<br>BROCHURE
+  </button>
+  <button class="grid-button large two-line" type="button">
+    FIND YOUR<br>DEALER
+  </button>
+  <button class="grid-button small" type="button">VIDEO</button>
+</div>
+
+  <section>
+    <h2>Content Convolution Reverb</h2>
+    <p>The Content Convolution Reverb is a sampled reverb offering detailed acoustic environments. Select from multiple reverb programs to customize your sound space for the most authentic and enjoyable playing and listening experience.</p>
+  </section>
+
+  <section>
+    <h2>General Specifications</h2>
+    <div class="highlight">
+      <ul>
+        <li>2 manuals (keyboards), each with 61 notes</li>
+        <li>36 speaking stops across four organ styles</li>
+        <li>30-note flat, radial, or radial-concave pedalboard options</li>
+        <li>Contemporary furniture made of solid oak</li>
+        <li>Built-in 3D surround sound with 14 speakers</li>
+        <li>Virtual Player Position (VPP) technology</li>
+        <li>Content Convolution Reverb module with over 10 reverb options</li>
+        <li>Keyboards with built-in metal core for responsive touch</li>
+        <li>Personal Control Center for easy adjustment and configuration</li>
+        <li>Optional ExtraVoice for additional orchestral and instrumental sounds</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dimensions and Weight</h2>
+    <ul>
+      <li>Height: 109 cm</li>
+      <li>Width: 127 cm</li>
+      <li>Depth with pedalboard: 88.5 cm</li>
+      <li>Depth without pedalboard: 54 cm</li>
+      <li>Weight: 136 kg</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Connecting Ins & Outs</h2>
+    <ul>
+      <li>MIDI In, Out, and Thru connections</li>
+      <li>Stereo Line In and Line Outs</li>
+      <li>Headphone input (16-32 Ohms)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Optional Extras</h2>
+    <ul>
+      <li>Factory split console</li>
+      <li>Height adjustable bench</li>
+      <li>Additional furniture stain options</li>
+      <li>Decorative rear panel</li>
+      <li>Height and depth adjustable music rack</li>
+      <li>Various keyboard options including wooden keyboards</li>
+      <li>ExtraVoice sound expansion</li>
+      <li>Toe pistons and thumb pistons</li>
+      <li>Various pedalboard sizes and styles, including black sharps/flats</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Content Organs - All rights reserved</p>
+  </footer>
+</div>
+
+<script>
+  const images = [
+   "https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20236/4079_3840x2160.webp/celeste-236-rustic-right.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20236/4081_3840x2160.webp/celeste-236-rustic-front.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20236/4080_3840x2160.webp/celeste-236-rustic-left.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20236/4083_3840x2160.webp/celeste-236-rustic-detail-2.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20236/4082_3840x2160.webp/celeste-236-rustic-detail-1.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20236/1678_3840x2160.webp/celeste-236-rustic-detail-6.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20236/1677_3840x2160.webp/celeste-236-rustic-detail-4.webp"
+
+
+
+
+  ];
+
+  let currentIndex = 0;
+  const carouselImage = document.getElementById('carouselImage');
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length ;
+    showImage(currentIndex);
+  }
+  /* const btn = document.getElementById('showListBtn');
+  const list = document.getElementById('itemList');
+
+  btn.addEventListener('click', () => {
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';  // Show list
+      //btn.textContent = 'Hide Items'; // Change button text
+    } else {
+      list.style.display = 'none';   // Hide list
+      //btn.textContent = 'Show Items'; // Reset button text
+    }
+  }); */
+
+  // Optional JavaScript functionality can be added here if needed
+  // For example, click actions on buttons:
+ const buttons = document.querySelectorAll('.grid-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`You clicked "${btn.textContent.replace('\n',' ')}" button.`);
+    });
+  });
+
+</script>
+
+</body>
+</html>

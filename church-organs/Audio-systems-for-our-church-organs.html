@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Audio Systems for Church Organs | Content Organs</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    margin: 0;
+    line-height: 1.5;
+  }
+  header {
+    background-color: #00427a;
+    color: white;
+    padding: 1.5em 1em;
+    text-align: center;
+  }
+  main {
+    max-width: 900px;
+    margin: 2em auto;
+    background: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.12);
+    padding: 2em 2.5em;
+  }
+  h1, h2, h3, h4 {
+    color: #00427a;
+    margin-top: 1.5em;
+    margin-bottom: 0.3em;
+  }
+  p {
+    margin: 1em 0;
+  }
+  ul {
+    margin: 1em 0 1em 1.5em;
+  }
+  ul li {
+    margin-bottom: 0.5em;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    background: #e4eaf1;
+    padding: 0.8em 0;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  nav button {
+    background-color: #00427a;
+    color: white;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 3px;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  nav button:hover {
+    background-color: #003060;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.85em;
+    color: #666;
+    padding: 1.5em 1em;
+    margin-top: 3em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Audio systems for your church organ</h1>
+</header>
+
+<nav>
+  <button onclick="scrollToSection('intro')">Overview</button>
+  <button onclick="scrollToSection('css')">Content Speaker Systems (CSS)</button>
+  <button onclick="scrollToSection('digitalPipe')">Digital Pipe Organ</button>
+  <button onclick="scrollToSection('hybrid')">Hybrid Organs</button>
+</nav>
+
+<main>
+  <section id="intro">
+    <h2>Overview</h2>
+    <p>Your church building is unique in terms of dimensions and interior. Besides a well-balanced design of the church organ, the experience and quality of sound are crucial. The right audio is perhaps the most important "stop" of your new church organ! At Content Organs, we offer three main audio system options: Content Speaker Systems (CSS), a 'digital pipe organ' (Kienle), and hybrid organs (in collaboration with Consoli Pipe Organs).</p>
+  </section>
+
+  <section id="css">
+    <h2>Content Speaker Systems (CSS)</h2>
+    <p><strong>Flexible configurations</strong> | <strong>High-quality sound reproduction</strong> | <strong>In-house developed intonation software</strong></p>
+    <p>Content has developed proprietary digital speaker systems called Content Sound Systems (CSS). These "high-end" speaker systems provide the right solutions to ensure each Chapel organ is optimally equipped for accompanying congregational singing, choir music, and liturgical support. Each organ in the Chapel series is assembled with a suitable speaker system tailored to its design.</p>
+  </section>
+
+  <section id="digitalPipe">
+    <h2>A digital pipe organ</h2>
+    <p><strong>A true digital pipe organ</strong> | <strong>Authentic sound reproduction</strong> | <strong>Fully customizable to your preferences</strong></p>
+    <p>German organ builder Ewald Kienle (1928) discovered how to combine digital organ sounds with the resonance of an organ pipe. By using advanced speakers amplified by real organ pipes, authentic pipe organ sounds are faithfully reproduced.</p>
+    <p>This patented technology precisely controls the sound development in pipes, meeting high sound requirements even under challenging temperature conditions. This technology enables you to enjoy playing a true 'digital pipe organ' in your church.</p>
+  </section>
+
+  <section id="hybrid">
+    <h2>Hybrid organs</h2>
+    <ul>
+      <li>Innovative wind-driven pipe systems</li>
+      <li>Combine digital voices with pipes</li>
+      <li>Temperature sensor and software integration</li>
+    </ul>
+    <p>By implementing Consoli Pipe Systems, Content Organs offers a hybrid solution combining the advantages of digital organs with organic pipe sounds. The pipework complements digital voices through in-house developed software and sensors that synchronize digitally and physically.</p>
+    <p>It's also possible to expand an existing pipe organ with a digital console and additional registers, merging the best of both worlds for a versatile and extensive church organ experience.</p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Content Organs. All rights reserved.
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+  }
+</script>
+
+</body>
+</html>

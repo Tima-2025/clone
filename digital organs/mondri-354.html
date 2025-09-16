@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Organs - Mondri 354</title>
+<style>
+  /* Reset basics */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+  }
+  a {
+    color: #0a3c5d;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    color: #0a3c5d;
+    font-weight: 700;
+  }
+  header p.intro {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 720px;
+    margin: 15px auto 0 auto;
+  }
+  .image-container {
+    text-align: center;
+    margin: 25px 0 40px;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.12);
+  }
+  section {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+  }
+  section h2 {
+    color: #0a3c5d;
+    border-left: 6px solid #f4a300;
+    padding-left: 12px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  p, ul {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  ul li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .highlight {
+    background-color: #f9f9f9;
+    border-left: 6px solid #f4a300;
+    padding: 15px 20px;
+    margin-bottom: 40px;
+  }
+  footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding-bottom: 20px;
+    border-top: 1px solid #ddd;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    section h2 {
+      font-size: 1.4rem;
+    }
+    .container {
+      padding: 0 10px;
+      margin: 20px auto;
+    }
+  }
+  .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 40, 40, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+
+  .arrow:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mondri 354</h1>
+      <p class="intro">
+        The Content Mondri 354 is part of the Cantate series featuring the maximum capabilities of Content Invention Technology®. Inspired by the ancient pipe organ in its various forms, this versatile organ offers four unique tonal worlds allowing you to play all major organ works optimally in one instrument. The Mondri 354 has a robust oak cabinet with wooden drawknobs including LED indication. The different organ styles are engraved on the drawknobs or optionally available via magnetic register fields.
+      </p>
+    </header>
+
+    <div class="carousel-container">
+  <button class="arrow arrow-left" onclick="prevImage()">&#8592;</button>
+  <img class="carousel-image" id="carouselImage" src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20354/5528_3840x2160.webp/mondri-354-cbm242-left.webp" alt="Carousel Image"/>
+  <button class="arrow arrow-right" onclick="nextImage()">&#8594;</button>
+</div>
+
+    <section>
+      <h2>Unrivaled Possibilities & Acoustic Excellence</h2>
+      <p>
+        The Mondri 354 features an impressive 12 independent audio channels, 20 speakers, and dynamic 180-watt amplifiers, providing outstanding sound detail and realism. The organ uses high-quality samples chosen and voiced for the internal audio system. Four independent surround channels radiate sound to the sides and top of the organ case, creating a digital organ experience that approaches the immersion of a pipe organ.
+      </p>
+      <p>
+        The solid oak cabinet exudes strength and craftsmanship, enhanced by LED lighting near the pedal and music stand, a bench with sheet music storage, and wooden swell pedals. The instrument is available with 30- or 32-note flat or concave (radial) pedalboards, and supports additional features such as toe pistons or a divisional setzer system.
+      </p>
+    </section>
+
+     <div class="button-grid">
+  <button class="grid-button large two-line" type="button">
+    REQUEST<br>BROCHURE
+  </button>
+  <button class="grid-button large two-line" type="button">
+    FIND YOUR<br>DEALER
+  </button>
+  <button class="grid-button small" type="button">VIDEO</button>
+</div>
+
+    <section>
+      <h2>Personal Control Center (PCC)</h2>
+      <p>
+        The Personal Control Center allows you to customize sound and playability settings effortlessly. Adjustments include choosing from more than 50 historical temperaments, adding detuning at register or key level, defining volume and tonal character per key and stop, and programming presets. This ensures the organ perfectly matches your personal taste and playing style.
+      </p>
+    </section>
+
+    <section>
+      <h2>Four Organ Styles in One</h2>
+      <p>
+        The Mondri 354 incorporates four different organ style dispositions: North German Baroque, Dutch Classical, French Romantic, and English Symphonic. Each organ style contains unique stop samples recorded on famous organs in Europe. Switch between styles instantly with the push of a button while the drawknob labels remain consistent. For example, a Principal 8' in the Dutch style becomes a Prinzipal 8' in the North German Baroque and a Diapason 8' in the English Symphonic style, allowing authentic performance across centuries.
+      </p>
+    </section>
+
+    <section>
+      <h2>Specifications</h2>
+      <div class="highlight">
+        <ul>
+          <li>3 manuals (keyboards) with velocity sensitivity</li>
+          <li>4 x 54 speaking stops (216 total stops)</li>
+          <li>30 or 32-note pedalboard options</li>
+          <li>Operation using wooden drawknobs with LED indication</li>
+          <li>Solid oak cabinet in positive style</li>
+          <li>12 independent audio channels and 20 speakers</li>
+          <li>Dynamic 180-watt digital amplifiers</li>
+          <li>Personal Control Center for advanced customization</li>
+          <li>Extensive programmable presets and crescendo system</li>
+          <li>Surround sound with multiple speaker locations</li>
+          <li>Selectable magnetic register fields (optional)</li>
+          <li>Height adjustable bench with music storage</li>
+          <li>LED lighting near pedal and music stand</li>
+          <li>Convolution reverb with 10 acoustical environments</li>
+          <li>Various keyboard and furniture options including tracker touch keyboards and black sharps/flats pedalboard</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Stop List Overview (Summary)</h2>
+      <p>The Mondri 354 has a comprehensive stoplist divided across 5 divisions: Pedal, Ruck Positiv, Werck, Ober Positiv, and Pedaal, featuring principals, flutes, mixtures, reeds, and couplers typical of historic and classical pipe organs. Due to length, below is a summarized highlight from each division.</p>
+      <ul>
+        <li><strong>Pedal:</strong> Principal 32', Octave 16', Subbas 16', mixtures, Trompet 8', Cornet 2', multiple couplers</li>
+        <li><strong>Ruck Positiv (Choir):</strong> Principle 8', Gedackt 8', Quintadena 8', Blockflöte 4', mixtures, Dulcian 16', Tremulant</li>
+        <li><strong>Werck (Great):</strong> Principal 16', Quintadena 16', Oktav 8', Rohrflöte, Mixtur, Trommet, Tremulant</li>
+        <li><strong>Ober Positiv (Swell):</strong> Gedackt 16', Principal 8', Rohrflöte 8', Nasat 3', Vox Humana 8', Tremulant</li>
+        <li><strong>Pedaal (Additional Pedal):</strong> Bourdon 32', Praestant 16', Gedekt 8', Fagot 16', Bazuin 16', Tremulant, multiple couplers</li>
+      </ul>
+      <p>For full details, please visit the official <a href="https://www.contentorgans.com/en/digital-organs/mondri-354/" target="_blank" rel="noopener noreferrer">Content Organs Mondri 354 page</a>.</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Content Organs - All rights reserved</p>
+    </footer>
+  </div>
+
+  <script>
+  const images = [
+  	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20354/5528_3840x2160.webp/mondri-354-cbm242-left.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20354/5527_3840x2160.webp/mondri-354-cbm242-front.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20354/5529_3840x2160.webp/mondri-354-cbm242-right.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20354/5526_3840x2160.webp/mondri-354-cbm242-detail-7.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20354/5524_3840x2160.webp/mondri-354-cbm242-detail-5.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20354/5523_3840x2160.webp/mondri-354-cbm242-detail-4.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20354/5520_3840x2160.webp/mondri-354-cbm242-detail-1.webp"
+
+]
+  let currentIndex = 0;
+  const carouselImage = document.getElementById('carouselImage');
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length ;
+    showImage(currentIndex);
+  }
+  /* const btn = document.getElementById('showListBtn');
+  const list = document.getElementById('itemList');
+
+  btn.addEventListener('click', () => {
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';  // Show list
+      //btn.textContent = 'Hide Items'; // Change button text
+    } else {
+      list.style.display = 'none';   // Hide list
+      //btn.textContent = 'Show Items'; // Reset button text
+    }
+  }); */
+
+  // Optional JavaScript functionality can be added here if needed
+  // For example, click actions on buttons:
+ const buttons = document.querySelectorAll('.grid-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`You clicked "${btn.textContent.replace('\n',' ')}" button.`);
+    });
+  });
+</script>
+
+
+</body>
+</html>

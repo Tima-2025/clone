@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Content Organs Footer Clone</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #f7f7f7; }
+    .footer {
+      background: #333;
+      color: #fff;
+      padding: 40px 0 0 0;
+      font-size: 16px;
+    }
+    .footer-main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+    .footer-col {
+      flex: 1 1 220px;
+      margin: 0 20px 30px 0;
+      min-width: 220px;
+    }
+    .footer-logo {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      position: relative;
+    }
+    .footer-logo .circle {
+      display: inline-block;
+      background: #ffe14d;
+      color: #222;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      text-align: center;
+      line-height: 32px;
+      font-size: 1.2em;
+      font-weight: bold;
+      position: absolute;
+      left: 120px;
+      top: -10px;
+    }
+    .footer-contact p, .footer-contact a {
+      color: #fff;
+      margin: 6px 0;
+      text-decoration: none;
+      display: block;
+    }
+    .footer-contact a:hover { text-decoration: underline; }
+    .footer-links, .footer-service {
+      margin-bottom: 10px;
+    }
+    .footer-links ul, .footer-service ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-links li, .footer-service li {
+      margin-bottom: 8px;
+    }
+    .footer-links a, .footer-service a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer-links a:hover, .footer-service a:hover {
+      text-decoration: underline;
+    }
+    .footer-newsletter {
+      min-width: 260px;
+    }
+    .footer-newsletter h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+    .footer-newsletter input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #888;
+      border-radius: 2px;
+      background: #222;
+      color: #fff;
+      font-size: 1em;
+    }
+    .footer-newsletter button {
+      width: 100%;
+      padding: 10px;
+      background: #ffe14d;
+      color: #222;
+      border: none;
+      border-radius: 2px;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    .footer-newsletter button:hover {
+      background: #ffd600;
+    }
+    .footer-bottom {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0 10px 0;
+      font-size: 0.95em;
+      margin-top: 20px;
+    }
+    @media (max-width: 900px) {
+      .footer-main { flex-direction: column; }
+      .footer-col { margin-right: 0; margin-bottom: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-col footer-contact">
+        <div class="footer-logo">
+          CONTENT <span class="circle">C</span>
+        </div>
+        <p>MARIËNHOEF 7<br>3851 ST ERMELO<br>THE NETHERLANDS</p>
+        <p>
+          <a href="mailto:info@contentorgans.nl">&#9993; INFO@CONTENTORGANS.NL</a>
+          <a href="tel:+31341554876">&#128222; +31 341 55 48 76</a>
+        </p>
+      </div>
+      <div class="footer-col footer-links">
+        <ul>
+          <li><a href="#">Digital organs</a></li>
+          <li><a href="#">Cambiare organs</a></li>
+          <li><a href="#">Church organs</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Dealers</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-service">
+        <ul>
+          <li><strong>Service</strong></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="UK" style="width:22px;vertical-align:middle;">
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h3>Subscribe to Newsletter</h3>
+        <form id="newsletterForm">
+          <input type="text" name="name" placeholder="NAME SURNAME" required>
+          <input type="email" name="email" placeholder="E-MAIL ADDRESS" required>
+          <input type="text" name="phone" placeholder="PHONE NUMBER" required>
+          <button type="submit">SEND</button>
+        </form>
+        <div id="newsletterMsg"></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; Contentorgans - All rights reserved &nbsp; | &nbsp; Designed by Contique &nbsp; | &nbsp; Done by Wielink websolutions
+    </div>
+  </footer>
+  <script>
+    // Newsletter form submission
+    document.getElementById('newsletterForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value
+      };
+      const msgDiv = document.getElementById('newsletterMsg');
+      msgDiv.textContent = "Sending...";
+      try {
+        const res = await fetch('/api/newsletter', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (res.ok) {
+          msgDiv.style.color = "lightgreen";
+          msgDiv.textContent = "Thank you for subscribing!";
+          form.reset();
+        } else {
+          msgDiv.style.color = "red";
+          msgDiv.textContent = result.error || "Error. Please try again.";
+        }
+      } catch (err) {
+        msgDiv.style.color = "red";
+        msgDiv.textContent = "Network error. Please try again.";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Organs - Cambiare MIDI Console</title>
+<style>
+  /* Reset margins and paddings */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0; 
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+  }
+  a {
+    color: #0a3c5d;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    color: #0a3c5d;
+    font-weight: 700;
+  }
+  header p.intro {
+    font-style: italic;
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 720px;
+    margin: 15px auto 0 auto;
+  }
+  .image-container {
+    text-align: center;
+    margin: 25px 0 40px;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.12);
+  }
+  section {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+  }
+  section h2 {
+    color: #0a3c5d;
+    border-left: 6px solid #f4a300;
+    padding-left: 14px;
+    margin-bottom: 25px;
+    font-size: 1.85rem;
+  }
+  section h3 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #0a3c5d;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  p, ul {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  ul li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .highlight {
+    background-color: #f9f9f9;
+    border-left: 6px solid #f4a300;
+    padding: 18px 20px;
+    margin-bottom: 30px;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    section h2 {
+      font-size: 1.5rem;
+    }
+    section h3 {
+      font-size: 1.1rem;
+    }
+    p, ul {
+      font-size: 0.95rem;
+    }
+    .container {
+      padding: 0 10px;
+      margin: 20px auto;
+    }
+  }
+  .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 40, 40, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+
+  .arrow:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Cambiare MIDI Console</h1>
+    <p class="intro">
+      The Cambiare MIDI Console allows you to play Hauptwerk™ or other Virtual Pipe Organ (VPO) samplers using your own computer and audio setup. Featuring a beautiful solid oak cabinet crafted with over forty years of organ-building expertise, this console combines classic craftsmanship with modern technology to deliver a high-quality playing experience.
+    </p>
+  </header>
+
+ <div class="carousel-container">
+  <button class="arrow arrow-left" onclick="prevImage()">&#8592;</button>
+  <img class="carousel-image" id="carouselImage" src="https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2936_3840x2160.webp/cambiare-midi-console-left.webp"
+ alt="Carousel Image"/>
+  <button class="arrow arrow-right" onclick="nextImage()">&#8594;</button>
+</div>
+
+  <section>
+    <h2>Custom Setup and Connections</h2>
+    <p>
+      The Cambiare MIDI Console is designed for simple and straightforward connection to your own computer and audio systems. A convenient hinged door on the side provides easy access to a built-in computer compartment. The console seamlessly integrates with the Content Controller to facilitate connection setup.
+    </p>
+    <p>
+      The overall audio setup is created using your preferred audio interfaces, amplifiers, and speakers. Please note that Content Organs does not provide configuration support for external equipment.
+    </p>
+  </section>
+
+   <div class="button-grid">
+  <button class="grid-button large two-line" type="button">
+    REQUEST<br>BROCHURE
+  </button>
+  <button class="grid-button large two-line" type="button">
+    FIND YOUR<br>DEALER
+  </button>
+  <button class="grid-button small" type="button">VIDEO</button>
+  <button class="grid-button small" type="button">LISTEN</button>
+
+  <section>
+    <h2>Play Famous Pipe Organs Worldwide</h2>
+    <p>
+      Content offers a comprehensive range of virtual pipe organs (VPO) through the Cambiare organ collection. Compatible with Hauptwerk™ and Sweelinq samplers, the Cambiare MIDI Console gives access to hundreds of organ samples from famous organs around the world. 
+    </p>
+    <p>
+      Experience limitless musical possibilities in your own home by scheduling a visit with one of our dealers or at the Hauptwerk Experience Center located at the Content organs workshop in Ermelo, Netherlands.
+    </p>
+  </section>
+
+  <section>
+    <h2>Solid and Reliable Furniture</h2>
+    <p>
+      The Cambiare MIDI Console is built using carefully selected European oak. As part of Content's in-house carpentry, the wood is cultivated and treated to ensure the highest quality and durability. The oak cabinet is available in various finishes, including lacquer, oil, and stain, making it adaptable to any interior or future décor.
+    </p>
+    <p>
+      Skilled carpenters assemble and finish each console daily, ranging from compact models to grand exclusive custom designs, guaranteeing reliability and elegance.
+    </p>
+  </section>
+
+  <section>
+    <h2>Specifications</h2>
+    <div class="highlight">
+      <ul>
+        <li>Supports 2, 3, or 4 manuals (keyboards)</li>
+        <li>Optional integrated touchscreens for control</li>
+        <li>Easy connection to your own computer and audio systems</li>
+        <li>User-friendly operation with Content Controller compatibility</li>
+        <li>Classic and stylish furniture made of solid oak</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Content Organs - All rights reserved</p>
+  </footer>
+
+</div>
+
+<script>
+  const images = [
+ "https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2936_3840x2160.webp/cambiare-midi-console-left.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2938_3840x2160.webp/cambiare-midi-console-front.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2939_3840x2160.webp/cambiare-midi-console-right.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2935_3840x2160.webp/cambiare-midi-console-detail-8.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2934_3840x2160.webp/cambiare-midi-console-detail-7.webp",
+"hhttps://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2933_3840x2160.webp/cambiare-midi-console-detail-6.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2931_3840x2160.webp/cambiare-midi-console-detail-4.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2930_3840x2160.webp/cambiare-midi-console-detail-3.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2928_3840x2160.webp/cambiare-midi-console-detail-1.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2926_3840x2160.webp/cambiare-midi-console-left-scherm.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2927_3840x2160.webp/cambiare-midi-console-front-scherm.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/2925_3840x2160.webp/cambiare-midi-console-right-scherm.webp"
+
+]
+  let currentIndex = 0;
+  const carouselImage = document.getElementById('carouselImage');
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length ;
+    showImage(currentIndex);
+  }
+  /* const btn = document.getElementById('showListBtn');
+  const list = document.getElementById('itemList');
+
+  btn.addEventListener('click', () => {
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';  // Show list
+      //btn.textContent = 'Hide Items'; // Change button text
+    } else {
+      list.style.display = 'none';   // Hide list
+      //btn.textContent = 'Show Items'; // Reset button text
+    }
+  }); */
+
+  // Optional JavaScript functionality can be added here if needed
+  // For example, click actions on buttons:
+ const buttons = document.querySelectorAll('.grid-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`You clicked "${btn.textContent.replace('\n',' ')}" button.`);
+    });
+  });
+</script>
+
+
+</body>
+</html>

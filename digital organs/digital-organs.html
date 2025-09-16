@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Organs | Content Organs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6fa;
+      color: #222;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 0.5rem 0;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #ce9696;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #e2e8ee;
+    }
+    .hero {
+      background: linear-gradient(120deg, #3d4144 0%, #3d4144 100%);
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .main-content {
+      background: #77797a;
+      display: flex;
+      max-width: 1200px;
+      margin: 2rem auto;
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+    .filters {
+      background: #807d7d;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 1.5rem;
+      min-width: 220px;
+      max-width: 260px;
+      height: fit-content;
+    }
+    .filters h2 {
+      color: #fdf9fb;
+      margin-top: 0;
+    }
+    .filter-group {
+      margin-bottom: 1.2rem;
+    }
+    .filter-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+    .filter-group select {
+      width: 100%;
+      padding: 0.4rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .products {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+   .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+ .product-card {
+ 
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 260px;
+  text-align: center;
+  transition: transform 0.2s;
+ 
+ }
+ .product-card img{
+   width:50%;
+  height: 50%;
+  object-fit: cover;
+ }
+   .product-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .main-content {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+      } 
+      .filters {
+        max-width: 100%;
+        min-width: 0;
+      }
+  
+ 
+
+    }
+   .links a{
+        color: #fff;
+        font-size: auto;
+        padding: 1.5rem 0;
+    } 
+       .overlay-text {
+      position: absolute;
+      
+    }
+
+   
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Content Organs</div>
+      <ul>
+        <li><a href="D:\Nithya\Godwin's\clone\home-page\index.html">Home</a></li>
+        <li><a href="D:\Nithya\Godwin's\clone\Cambiare\cambiare-organs.html">Cambiare organs</a></li>
+        <li><a href="D:\Nithya\Godwin's\clone\church-organs\church-organs.html">Church organs</a></li>
+        <li><a href="D:\Nithya\Godwin's\clone\about-us\index.html">About us</a></li>
+        <li><a href="D:\Nithya\Godwin's\clone\service\service.html">Service</a></li>
+        <li><a href="D:\Nithya\Godwin's\clone\contact-us\contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Check out our selection of digital organs here</h1>
+      <p>A suitable organ for every organist!</p>
+    </section>
+    <div class="main-content">
+      <aside class="filters">
+        <h2>Filters</h2>
+        <div class="filter-group">
+          <label>Manuals:</label>
+          <select id="manuals" onchange="filterManuals()">
+            <option value="all">All</option>
+            <option value="1 manual">1 manual</option>
+            <option value="2 manuals">2 manuals</option>
+            <option value="3 manuals">3 manuals</option>
+            <option value="4 manuals">4 manuals</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Pedal:</label>
+         <select id="pedal" onchange="filterPedal()">
+            <option value="all">All</option>
+            <option value="13 note">13 note</option>
+            <option value="27 note">27 note</option>
+            <option value="30 note">30 note</option>
+            <option value="32 note">32 note</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Furniture:</label>
+          <select id="furniture"onchange="filterFurniture()">
+            <option value="all">All</option>
+            <option value="Portable cabinet">Portable cabinet</option>
+            <option value="High cabinet">High cabinet</option>
+            <option value="Rolltop edition">Rolltop edition</option>
+            <option value="Standard cabinet">Standard cabinet</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Aantal Register:</label>
+          <select id="Aantal" onchange="filterAantal()">
+            <option value="all">All</option>
+            <option value="24 stops">24 stops</option>
+            <option value="36 stops">36 stops</option>
+            <option value="40 stops">40 stops</option>
+            <option value="46 stops">46 stops</option>
+            <option value="54 stops">54 stops</option>
+            <option value="76 stops">76 stops</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Soorten Register:</label>
+          <select id="soorten" onchange="filterSoorten()">
+            <option value="all">All</option>
+            <option value="Automatic moveable drawknobs">Automatic moveable drawknobs</option>
+            <option value="Wooden drawknobs">Wooden drawknobs</option>
+            <option value="Enlighted TAB stops">Enlighted TAB stops</option>
+            <option value="Enlighted drawknobs">Enlighted drawknobs</option>
+          </select>
+        </div>
+      </aside>
+      <section class="products">
+        <div class="product-grid">
+         <div class="product-card" data-manuals="2 manuals" data-aantal="24 stops" data-soorten="Enlighted TAB stops" data-furniture="Portable cabinet" data-pedal="30 note">
+           <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5343_370x310_autocrop.webp/compact-224.webp" alt="Compact 224"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\compact-224.html">Compact 224</a></h3>
+            <p>Digital organs</p>
+          </div>
+          <div class="product-card" data-manuals="1 manual" data-aantal="24 stops" data-soorten="Enlighted TAB stops" data-furniture="Rolltop edition" data-pedal="13 note,27 note">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5341_370x310_autocrop.webp/clavis-125.webp" alt="Clavis 125"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\clavis-125.html">Clavis 125</a></h3>
+            <p>Digital organs</p>
+          </div>
+          <div class="product-card" data-manuals="2 manuals" data-aantal="27 stops" data-soorten="Enlighted TAB stops" data-furniture="Rolltop edition" >
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5342_370x310_autocrop.webp/clavis-224.webp" alt="Clavis 224"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\clavis-224.html">Clavis 224</a></h3>
+            <p>Digital organs</p>
+          </div>
+         <div class="product-card" data-manuals="2 manuals" data-aantal="36 stops" data-soorten="Enlighted TAB stops" data-furniture="Rolltop edition,Standard cabinet" data-pedal="27 note,30 note,32 note">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5339_370x310_autocrop.webp/celeste-236.webp" alt="Celeste 236"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\celeste-236.html">Celeste 236</a></h3>
+            <p>Digital organs</p>
+          </div>
+          <div class="product-card" data-manuals="3 manuals" data-aantal="40 stops" data-soorten="Enlighted TAB stops" data-furniture="Rolltop edition,Standard cabinet" data-pedal="30 note,32 note">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5340_370x310_autocrop.webp/celeste-340.webp" alt="Celeste 340"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\celeste-340.html">Celeste 340</a></h3>
+            <p>Digital organs</p>
+          </div>
+          <div class="product-card" data-manuals="3 manuals" data-aantal="46 stops" data-soorten="Enlighted TAB stops" data-furniture="Rolltop edition,Standard cabinet" data-pedal="30 note,32 note">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5338_370x310_autocrop.webp/cantate-346.webp" alt="Cantate 346"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\cantate-346.html">Cantate 346</a></h3>
+            <p>Digital organs</p>
+          </div>
+          <div class="product-card" data-manuals="2 manuals" data-aantal="36 stops" data-soorten="Wooden drawknobs" data-furniture="High cabinet" data-pedal="30 note">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5347_370x310_autocrop.webp/mondri-236.webp" alt="Mondri 236"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\mondri-236.html">Mondri 236</a></h3>
+            <p>Digital organs</p>
+          </div>
+          <div class="product-card" data-manuals="3 manuals" data-aantal="40 stops" data-soorten="Wooden drawknobs" data-furniture="High cabinet" data-pedal="30 note">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5350_370x310_autocrop.webp/mondri-340.webp" alt="Mondri 340"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\mondri-340.html">Mondri 340</a></h3>
+            <p>Digital organs</p>
+          </div>
+          <div class="product-card" data-manuals="3 manuals" data-aantal="54 stops" data-soorten="Enlighted drawknobs" data-furniture="High cabinet" data-pedal="30 note,32 note">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5348_370x310_autocrop.webp/mondri-354.webp" alt="Mondri 354"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\mondri-354.html">Mondri 354</a></h3>
+            <p>Digital organs</p>
+          </div>
+          <div class="product-card" data-manuals="3 manuals" data-aantal="54 stops" data-soorten="Enlighted drawknobs,Automatic moveable drawknobs" data-furniture="Rolltop edition" data-pedal="30 note,32 note">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5349_370x310_autocrop.webp/cantate-354.webp" alt="Cantate 354"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\cantate-354.html">Cantate 354</a></h3>
+            <p>Digital organs</p>
+          </div>
+          <div class="product-card" data-manuals="4 manuals" data-aantal="76 stops" data-soorten="Enlighted drawknobs,Automatic moveable drawknobs" data-furniture="Rolltop edition" data-pedal="30 note,32 note">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5344_370x310_autocrop.webp/concerto-476.webp" alt="Concerto 476"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\concerto-476.html">Concerto 476</a></h3>
+            <p>Digital organs</p>
+          </div>
+          <div class="product-card" data-manuals="4 manuals" data-aantal="76 stops" data-soorten="Wooden drawknobs" data-furniture="High cabinet" data-pedal="32 note">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5346_370x310_autocrop.webp/concerto-jubileo-40.webp" alt="Concerto Jubileo 40"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\digital organs\concerto-jubileo-40.html">Concerto Jubileo 40</a></h3>
+            <p>Digital organs</p>
+          </div>
+        </div>
+       </section>
+       <div>
+         <section class="links">
+      <ol>
+        <li><a href="D:\Nithya\Godwin's\clone\digital organs\about-our-digital-organs.html">About our digital organs</a></li>
+      </ol>
+      </section>
+       </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Content Organs. All rights reserved.</p>
+  </footer>
+  <script>
+    // Placeholder for filter interactivity
+    //document.querySelectorAll('.filters select').forEach(select => {
+      //select.addEventListener('change', function() {
+        // In a real app, filter the product cards here
+        //alert('Filtering is not implemented in this static demo.');
+      //});
+    //});
+    //Church event button click test
+      //  const button = document.getElementById('prdbtn');
+        
+//
+  //      button.addEventListener('click', () => {
+    //       
+      //  });
+ function filterManuals() {
+      const selected = document.getElementById("manuals").value;
+      const cards = document.querySelectorAll(".product-card");
+      cards.forEach(card => {
+        card.style.display = selected === "all" || card.dataset.manuals === selected ? "block" : "none";
+      });
+    }
+
+     function filterAantal() {
+      const selected = document.getElementById("aantal").value;
+      const cards = document.querySelectorAll(".product-card");
+      cards.forEach(card => {
+        card.style.display = selected === "all" || card.dataset.aantal === selected ? "block" : "none";
+      });
+    }
+
+    function filterSoorten() {
+      const selected = document.getElementById("soorten").value;
+      const cards = document.querySelectorAll(".product-card");
+      cards.forEach(card => {
+           // Split the data-soorten attribute into an array, trimming spaces just in case
+    const soortenValues = card.dataset.soorten ? card.dataset.soorten.split(',').map(val => val.trim()) : [];
+
+    // Show if selected is 'all' or if soortenValues include the selected soorten value
+    if (selected === "all" || soortenValues.includes(selected)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+      });
+    }
+
+      function filterFurniture() {
+      const selected = document.getElementById("furniture").value;
+      const cards = document.querySelectorAll(".product-card");
+      cards.forEach(card => {
+           // Split the data-furniture attribute into an array, trimming spaces just in case
+    const furnitureValues = card.dataset.pedal ? card.dataset.furniture.split(',').map(val => val.trim()) : [];
+
+    // Show if selected is 'all' or if furnitureValues include the selected soorten value
+    if (selected === "all" || furnitureValues.includes(selected)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+      });
+    }
+
+      function filterPedal() {
+      const selected = document.getElementById("pedal").value;
+      const cards = document.querySelectorAll(".product-card");
+      cards.forEach(card => {  
+        // Split the data-pedal attribute into an array, trimming spaces just in case
+    const pedalValues = card.dataset.pedal ? card.dataset.pedal.split(',').map(val => val.trim()) : [];
+
+    // Show if selected is 'all' or if pedalValues include the selected pedal value
+    if (selected === "all" || pedalValues.includes(selected)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+      });
+    }
+
+  </script>
+</body>
+</html>

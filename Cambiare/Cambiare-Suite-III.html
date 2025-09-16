@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Organs - Cambiare Suite III</title>
+<style>
+  /* Reset margins and paddings */
+  body, h1, h2, p, ul, li {
+    margin: 0; 
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+  }
+  a {
+    color: #0a3c5d;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    color: #0a3c5d;
+    font-weight: 700;
+  }
+  header p.intro {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 720px;
+    margin: 15px auto 0 auto;
+  }
+  .image-container {
+    text-align: center;
+    margin: 25px 0 40px;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.12);
+  }
+  section {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+  }
+  section h2 {
+    color: #0a3c5d;
+    border-left: 6px solid #f4a300;
+    padding-left: 12px;
+    margin-bottom: 18px;
+    font-size: 1.8rem;
+  }
+  p, ul {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  ul li {
+    margin-bottom: 8px;
+  }
+  footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding-bottom: 20px;
+    border-top: 1px solid #ddd;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    section h2 {
+      font-size: 1.4rem;
+    }
+    .container {
+      padding: 0 10px;
+      margin: 20px auto;
+    }
+  }
+    .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 40, 40, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+
+  .arrow:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Cambiare Suite III</h1>
+    <p class="intro">
+      With the Content Cambiare Suite III, playing church organs in the living room becomes possible for every organist. The combination of advanced developments from Content's organ factory and the diverse collection of sample sets via the Sweelinq sampler results in a new and high-quality model in the Cambiare collection. Affordability and class go hand in hand with the Cambiare Suite III. The Cambiare Suite is also available in a version with two keyboards, the Cambiare Suite II.
+    </p>
+  </header>
+
+  <div class="carousel-container">
+  <button class="arrow arrow-left" onclick="prevImage()">&#8592;</button>
+  <img class="carousel-image" id="carouselImage" src="https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5613_3840x2160.webp/cambiare-suite-iii-black-sky-left.webp" alt="Carousel Image"/>
+  <button class="arrow arrow-right" onclick="nextImage()">&#8594;</button>
+</div>
+  <section>
+    <h2>Durability, Elegance, and Quality</h2>
+    <p>
+      The organ cabinet is entirely made in real oak and available in an extensive collection of stain, oil, or paint colors to complement your interior perfectly. The Cambiare Suite offers the ideal combination of solidity, elegance, and quality.
+    </p>
+  </section>
+
+  <div class="button-grid">
+  <button class="grid-button large two-line" type="button">
+    REQUEST<br>BROCHURE
+  </button>
+  <button class="grid-button large two-line" type="button">
+    FIND YOUR<br>DEALER
+  </button>
+  <button class="grid-button small" type="button">VIDEO</button>
+</div>
+
+  <section>
+    <h2>Cabinet and Audio</h2>
+    <p>
+      This model features a high-quality multi-channel audio system fully integrated into the organ cabinet, eliminating the need to connect external speakers in the living room. This innovative audio system delivers a realistic and rich spatial sound experience.
+    </p>
+  </section>
+
+  <section>
+    <h2>Advanced User Interface</h2>
+    <p>
+      The Cambiare Suite III is equipped with two integrated 10" touchscreens, allowing effortless operation of all controls and sample sets via the Sweelinq interface. This user-friendly system enables quick switching between multiple sample sets and convenient control of registrations and presets.
+    </p>
+  </section>
+
+  <section>
+    <h2>Specifications</h2>
+    <ul>
+      <li>3 keyboards (manuals)</li>
+      <li>Standard with two 10" high-resolution touchscreens</li>
+      <li>Ultimate sound experience through high-end audio protocol</li>
+      <li>Multi-functional audio system fully integrated into the organ cabinet</li>
+      <li>Infinitely adjustable convolution reverb</li>
+      <li>User-friendly operation with Sweelinq interface</li>
+      <li>Easy switching between different sample sets</li>
+      <li>Contemporary designed furniture with solid oak cabinet</li>
+      <li>Available in wide variety of stain, oil, or paint finishes</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Content Organs - All rights reserved</p>
+  </footer>
+
+</div>
+
+<script>
+  const images = [
+ "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5613_3840x2160.webp/cambiare-suite-iii-black-sky-left.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5616_3840x2160.webp/cambiare-suite-iii-black-sky-front.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5614_3840x2160.webp/cambiare-suite-iii-black-sky-right.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5602_3840x2160.webp/cambiare-suite-iii-black-sky-detail-1.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5603_3840x2160.webp/cambiare-suite-iii-black-sky-detail-2.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5604_3840x2160.webp/cambiare-suite-iii-black-sky-detail-3.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5605_3840x2160.webp/cambiare-suite-iii-black-sky-detail-4.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5606_3840x2160.webp/cambiare-suite-iii-black-sky-detail-5.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5607_3840x2160.webp/cambiare-suite-iii-black-sky-detail-6.webp",
+"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5608_3840x2160.webp/cambiare-suite-iii-black-sky-detail-7.webp"
+
+]
+  let currentIndex = 0;
+  const carouselImage = document.getElementById('carouselImage');
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length ;
+    showImage(currentIndex);
+  }
+  /* const btn = document.getElementById('showListBtn');
+  const list = document.getElementById('itemList');
+
+  btn.addEventListener('click', () => {
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';  // Show list
+      //btn.textContent = 'Hide Items'; // Change button text
+    } else {
+      list.style.display = 'none';   // Hide list
+      //btn.textContent = 'Show Items'; // Reset button text
+    }
+  }); */
+
+  // Optional JavaScript functionality can be added here if needed
+  // For example, click actions on buttons:
+ const buttons = document.querySelectorAll('.grid-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`You clicked "${btn.textContent.replace('\n',' ')}" button.`);
+    });
+  });
+</script>
+
+</body>
+</html>

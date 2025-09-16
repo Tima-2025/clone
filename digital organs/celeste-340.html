@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Organs - Celeste 340</title>
+<style>
+  /* Reset basics */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.5;
+  }
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+  }
+  header h1 {
+    color: #0a3c5d;
+    font-weight: 700;
+    font-size: 2.4rem;
+  }
+  header p {
+    margin-top: 15px;
+    font-style: italic;
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+  }
+  .image-container {
+    text-align: center;
+    margin: 30px 0 40px;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  }
+  section {
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section h2 {
+    color: #0a3c5d;
+    border-left: 6px solid #f4a300;
+    padding-left: 12px;
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+  }
+  p, ul {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  ul li {
+    margin-bottom: 8px;
+  }
+  .highlight {
+    background-color: #f9f9f9;
+    border-left: 6px solid #f4a300;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+  }
+  footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding-bottom: 20px;
+    border-top: 1px solid #ddd;
+  }
+  a {
+    color: #0a3c5d;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+    section h2 {
+      font-size: 1.4rem;
+    }
+    .container {
+      padding: 0 10px;
+      margin: 20px auto;
+    }
+  }
+    .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 40, 40, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+
+  .arrow:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Celeste 340</h1>
+    <p>A grand and complete home organ – the Celeste 340 features 3 manuals with metal core keyboards and pedal, enabling you to play all major organ works across four unique organ styles. With a simple press of a button, switch between Baroque, Classic, Romantic, or Symphonic styles. Choose from over 50 historical temperaments. The in-house high-quality samples combined with Content Convolution Reverb guarantee years of musical inspiration.</p>
+  </header>
+
+  <div class="carousel-container">
+  <button class="arrow arrow-left" onclick="prevImage()">&#8592;</button>
+  <img class="carousel-image" id="carouselImage" src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5343_370x310_autocrop.webp/compact-224.webp" alt="Carousel Image"/>
+  <button class="arrow arrow-right" onclick="nextImage()">&#8594;</button>
+</div>
+
+  <section>
+    <h2>Key Features</h2>
+    <ul>
+      <li>3 manuals with metal core keyboards</li>
+      <li>4 x 40 speaking stops (total 160 unique stop samples)</li>
+      <li>4 unique organ sound styles: English Symphonic, German Baroque, French Romantic, Dutch Classic</li>
+      <li>30-note straight, concave or radial concave pedalboard options</li>
+      <li>Massive oak furniture with optional finishes</li>
+      <li>50 historical temperaments available</li>
+      <li>Personal Control Center (PCC) for easy adjustment of volume, reverb, tremulant, stop settings, and many customizable options</li>
+      <li>Built-in Virtual Player Position (VPP) technology for immersive 3D surround sound</li>
+      <li>14 high-quality internal speakers with 6-channel digital amplification (total 180 watts)</li>
+      <li>LED lighting on pedalboard and illuminated music rack</li>
+      <li>Optional ExtraVoice expansion adding 112 non-classical sounds including orchestral, vintage drawbars, pianos, bells, harpsichord, and more</li>
+    </ul>
+  </section>
+    <div class="button-grid">
+  <button class="grid-button large two-line" type="button">
+    REQUEST<br>BROCHURE
+  </button>
+  <button class="grid-button large two-line" type="button">
+    FIND YOUR<br>DEALER
+  </button>
+  <button class="grid-button small" type="button">VIDEO</button>
+</div>
+
+  <section>
+    <h2>Personal Control Center</h2>
+    <p>The PCC allows you to precisely customize your playing experience including master volume, stop voicing per individual key, reverb programs, tremulant depth and speed, historical temperaments, manual compass adjustment, bellows stability, stop group memories, extravoice control (optional), and more.</p>
+  </section>
+
+  <section>
+    <h2>Audio System & Surround Sound</h2>
+    <p>The organ is equipped with an advanced 6-channel amplified multi-speaker system with integrated 3D surround sound technology, providing a magnificent spatial dispersion and realistic organ sound. The Virtual Player Position allows you to experience different sound perspectives as if playing in different locations within a church setting.</p>
+  </section>
+
+  <section>
+    <h2>Connection & Accessories</h2>
+    <ul>
+      <li>MIDI In, Out, and Thru ports</li>
+      <li>Stereo Line In and Line Outs</li>
+      <li>Headphone output (16-32 Ohms)</li>
+      <li>Optional extras including factory split console, height adjustable bench, additional stains, decorative rear panel, adjustable music rack, wooden keyboards, toe and thumb pistons, and various pedalboard sizes including black sharps/flats</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Dimensions & Weight</h2>
+    <ul>
+      <li>Height: 116 cm</li>
+      <li>Width: 130 cm</li>
+      <li>Depth with pedalboard: 93 cm</li>
+      <li>Depth without pedalboard: 65 cm</li>
+      <li>Weight: 150 kg</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Content Organs - All rights reserved</p>
+  </footer>
+</div>
+
+<script>
+  const images = [
+  "https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20340/3882_3840x2160.webp/celeste-340-cbm-431-right.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20340/3881_3840x2160.webp/celeste-340-cbm-431-left.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20340/3880_3840x2160.webp/celeste-340-cbm-431-front.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20340/3874_3840x2160.webp/celeste-340-cbm-431-detail-1.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20340/3876_3840x2160.webp/celeste-340-cbm-431-detail-3.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Celeste%20340/3878_3840x2160.webp/celeste-340-cbm-431-detail-5.webp"
+  ];
+
+  let currentIndex = 0;
+  const carouselImage = document.getElementById('carouselImage');
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length ;
+    showImage(currentIndex);
+  }
+  /* const btn = document.getElementById('showListBtn');
+  const list = document.getElementById('itemList');
+
+  btn.addEventListener('click', () => {
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';  // Show list
+      //btn.textContent = 'Hide Items'; // Change button text
+    } else {
+      list.style.display = 'none';   // Hide list
+      //btn.textContent = 'Show Items'; // Reset button text
+    }
+  }); */
+
+  // Optional JavaScript functionality can be added here if needed
+  // For example, click actions on buttons:
+ const buttons = document.querySelectorAll('.grid-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`You clicked "${btn.textContent.replace('\n',' ')}" button.`);
+    });
+  });
+</script>
+
+</body>
+</html>

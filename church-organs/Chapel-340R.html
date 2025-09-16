@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Organs - Chapel 340R</title>
+<style>
+  /* Reset margins and paddings */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0; 
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 40px;
+  }
+  a {
+    color: #0a3c5d;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #0a3c5d;
+  }
+  header p.intro {
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #555;
+    max-width: 720px;
+    margin: 15px auto 0 auto;
+  }
+  .image-container {
+    text-align: center;
+    margin: 25px 0 40px;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.12);
+  }
+  section {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+  }
+  section h2 {
+    font-size: 1.9rem;
+    color: #0a3c5d;
+    border-left: 6px solid #f4a300;
+    padding-left: 14px;
+    margin-bottom: 25px;
+  }
+  section h3 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #0a3c5d;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  p, ul {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  ul li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .highlight {
+    background-color: #f9f9f9;
+    border-left: 6px solid #f4a300;
+    padding: 18px 20px;
+    margin-bottom: 40px;
+  }
+  footer {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    section h2 {
+      font-size: 1.5rem;
+    }
+    section h3 {
+      font-size: 1.15rem;
+    }
+    p, ul {
+      font-size: 0.95rem;
+    }
+    .container {
+      padding: 0 10px;
+      margin: 20px auto;
+    }
+  }
+  .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 40, 40, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+
+  .arrow:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+    #itemList {
+    display: none;
+    margin-top: 15px;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    max-width: 300px;
+    background: #f9f9f9;
+  }
+   #itemList li {
+   
+    margin-bottom: 8px;
+  }
+  #showListBtn {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 260px;
+  text-align: center;
+  transition: transform 0.2s;
+
+  }
+  .listbtn:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  }
+  /* Container grid for 4 buttons */
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(2, 70px);
+    gap: 20px 50px; /* vertical gap 20px, horizontal 50px */
+  }
+
+  /* Style buttons */
+  .grid-button {
+    background: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 15px;
+    user-select: none;
+    transition: border-color 0.3s ease;
+  }
+
+  /* For large buttons (top two) - taller */
+  .grid-button.large {
+    height: 70px;
+  }
+
+  /* For smaller buttons (bottom two) */
+  .grid-button.small {
+    height: 45px;
+  }
+
+  /* Hover and focus border */
+  .grid-button:hover,
+  .grid-button:focus {
+    border: 1px solid #333;
+    outline: none;
+  }
+
+  /* Split text in two lines for buttons that require */
+  .two-line {
+    white-space: pre-line; /* respects newlines */
+  }
+  
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Chapel 340R</h1>
+    <p class="intro">
+      The Content Chapel 340R is a model that comes standard with a 6-channel external audio system, with internal speakers optionally added, of course. The use of modular speaker systems allows the radiation and position of the speakers to be determined and changed on-site. Connecting additional (bass) speakers is also a possibility. Thanks to the proprietary Content Contenation® software, voicing to the space and location has never been so straightforward.
+    </p>
+  </header>
+
+<!-- <div class="image-container">
+    <img src="https://www.contentorgans.com/uploads/products/chapel-340r/chapel340r-1-800.jpg" alt="Content Organs Chapel 340R" />
+  </div>  --> 
+
+   <div class="carousel-container">
+  <button class="arrow arrow-left" onclick="prevImage()">&#8592;</button>
+  <img class="carousel-image" id="carouselImage" src="https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4737_3840x2160.webp/chapel-340-cbm121-left.webp" alt="Carousel Image"/>
+  <button class="arrow arrow-right" onclick="nextImage()">&#8594;</button>
+</div>
+
+  <section>
+    <h2>Four total different organ sounds</h2>
+    <p>
+      The four different tonal worlds (each with 40 speaking voices) are composed of voices from various historical pipe organs in Europe. The sound is characterized by clarity and carrying power, making the organ highly suitable for accompanying congregational singing.
+    </p>
+    <p>
+      When using the Classic style (à la Bätz-Witte), you can accompany your congregation with powerful principals, warm flutes, and beautiful accompanying stops like the Cornet and Sesquialter. As you build further, you'll get a magnificent plenum, complemented by reeds and mixture stops.
+    </p>
+  </section>
+
+  <div class="button-grid">
+  <button class="grid-button large two-line" type="button">
+    REQUEST<br>BROCHURE
+  </button>
+  <button class="grid-button large two-line" type="button">
+    FIND YOUR<br>DEALER
+  </button>
+  <button class="grid-button small" type="button">VIDEO</button>
+  <button class="grid-button small" type="button">SPECIFICATIONS</button>
+</div>
+
+  <section>
+    <h2>Illuminated drawknobs</h2>
+    <p>
+      The Chapel 340R comes standard in a model with illuminated drawknobs on both sides of the manuals. This provides the model with the optimal experience of a pipe organ. The organ case is, of course, standard with a roll-top cover. Attractive options, such as an LED-lit music stand or wooden-filled keyboards, complete the overall organ experience.
+    </p>
+  </section>
+
+  <section>
+    <h2>Cabinet</h2>
+    <p>
+      The Chapel 340R is built in an oak cabinet, with various color options available. Content's cabinetmakers work daily on selecting, processing, and coloring pre-selected oak wood. As a result, the Content Chapel 340R is a delight for the ears and eyes in your church or concert hall.
+    </p>
+  </section>
+
+  <section>
+    <h2>Intonation on every detail!... Contentation</h2>
+    <p>
+      An important element in Content's church organs is the ability to intonate an organ entirely to one's taste and with an eye for the specific characteristics of the (church) space. With a software program developed specifically for this purpose (Contenation®), it is possible to build the disposition and settings of the organ entirely from scratch.
+    </p>
+    <p>
+      This includes, among other things, the ability to distribute stops across various outputs, adjust the tonal character, volumes, and tremulants per key and per stop, or fine-tune the voicing to the acoustics of the space. Detail-oriented finishing!
+    </p>
+  </section>
+
+  <section>
+    <h2>General specifications</h2>
+    <div class="highlight">
+      <ul>
+        <li>3 velocity sensitive manuals</li>
+        <li>4x 40 lighted drawknobs</li>
+        <li>4 unique organ styles</li>
+        <li>External speakers (monitor system optional)</li>
+        <li>Suitable for churches with approximately 800 people (depending on church size)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Stop list overview</h2>
+<section>
+    <h3 button id="showListBtn" class="listbtn">Pedal (9 stops)</button>
+       
+    </h3>
+    <ul id="itemList">
+      <li>Prinzipal 16'</li>
+      <li>Subbass 16'</li>
+      <li>Quintbass 12'</li>
+      <li>Oktave 8'</li>
+      <li>Gedackt 8'</li>
+      <li>Oktave 4'</li>
+      <li>Posaune 16'</li>
+      <li>Trompete 8'</li>
+      <li>Cornet 4'</li>
+      <li>Koppel Ped.-Pos.</li>
+      <li>Koppel Ped.-Hw.</li>
+      <li>Koppel Ped.-Sw.</li>
+    </ul>
+</section>
+<section>
+    <h3 button id="showListBtn" class="listbtn">Positiv (8 stops)</button></h3>
+    <ul id="itemList">
+      <li>Gedackt 8'</li>
+      <li>Quintadena 8'</li>
+      <li>Prinzipal 4'</li>
+      <li>Rohrflöte 4'</li>
+      <li>Quintflöte 3'</li>
+      <li>Oktave 2'</li>
+      <li>Sesquialtera II fach</li>
+      <li>Dulzian 8'</li>
+      <li>Tremulant</li>
+      <li>Koppel Pos.-Sw.</li>
+    </ul>
+</section>
+<section>
+    <h3 button id="showListBtn" class="listbtn">Hauptwerk (11 stops)</h3>
+    <ul id="itemList">
+      <li>Quintadena 16'</li>
+      <li>Prinzipal 8'</li>
+      <li>Rohrflöte 8'</li>
+      <li>Oktave 4'</li>
+      <li>Blockflöte 4'</li>
+      <li>Quinte 3'</li>
+      <li>Super Oktave 2'</li>
+      <li>Tertian II fach</li>
+      <li>Mixtur VI fach</li>
+      <li>Trompete 16'</li>
+      <li>Trompete 8'</li>
+      <li>Tremulant</li>
+      <li>Koppel Hw.-Pos.</li>
+      <li>Koppel Hw.-Sw.</li>
+    </ul>
+</section>
+<section>
+<div>
+    <h3 button id="showListBtn" class="listbtn">Schwellwerk (12 stops)</h3>
+    <ul id="itemList">
+      <li>Prinzipal 8'</li>
+      <li>Holzflöte 8'</li>
+      <li>Viola da Gamba 8'</li>
+      <li>Voce Umana 8'</li>
+      <li>Oktave 4'</li>
+      <li>Spitzflöte 4'</li>
+      <li>Nasat 3'</li>
+      <li>Waldflöte 2'</li>
+      <li>Scharff IV fach</li>
+      <li>Fagott 16'</li>
+      <li>Trompete 8'</li>
+      <li>Oboe 8'</li>
+      <li>Tremulant</li>
+    </ul>
+</div>
+</section>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Content Organs - All rights reserved</p>
+  </footer>
+</div>
+
+
+
+<script>
+  const images = [
+    "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4737_3840x2160.webp/chapel-340-cbm121-left.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4736_3840x2160.webp/chapel-340-cbm121-front.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4738_3840x2160.webp/chapel-340-cbm121-right.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4735_3840x2160.webp/chapel-340-cbm121-detail-11.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4735_3840x2160.webp/chapel-340-cbm121-detail-11.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4733_3840x2160.webp/chapel-340-cbm121-detail-9.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4732_3840x2160.webp/chapel-340-cbm121-detail-8.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4731_3840x2160.webp/chapel-340-cbm121-detail-7.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4730_3840x2160.webp/chapel-340-cbm121-detail-6.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4729_3840x2160.webp/chapel-340-cbm121-detail-5.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4727_3840x2160.webp/chapel-340-cbm121-detail-3.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4726_3840x2160.webp/chapel-340-cbm121-detail-2.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/4725_3840x2160.webp/chapel-340-cbm121-detail-1.webp"
+
+  ];
+
+  let currentIndex = 0;
+  const carouselImage = document.getElementById('carouselImage');
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length ;
+    showImage(currentIndex);
+  }
+   const btn = document.getElementById('showListBtn');
+  const list = document.getElementById('itemList');
+
+  btn.addEventListener('click', () => {
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';  // Show list
+      //btn.textContent = 'Hide Items'; // Change button text
+    } else {
+      list.style.display = 'none';   // Hide list
+      //btn.textContent = 'Show Items'; // Reset button text
+    }
+  });
+
+
+  // Optional JavaScript functionality can be added here if needed
+  // For example, click actions on buttons:
+  const buttons = document.querySelectorAll('.grid-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`You clicked "${btn.textContent.replace('\n',' ')}" button.`);
+    });
+  });
+</script>
+
+</body>
+</html>

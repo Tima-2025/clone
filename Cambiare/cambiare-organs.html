@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cambiare Organs | Content Organs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6fa;
+      color: #222;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 0.5rem 0;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .logo {
+      font-size: 1.7rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #0078d7;
+    }
+    .hero {
+      background: linear-gradient(120deg,#3d4144 0%, #3d4144 100%);
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .main-content {
+      background: #77797a;
+      display: flex;
+      max-width: 1200px;
+      margin: 2rem auto;
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+    .filters {
+     background: #807d7d;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 1.5rem;
+      min-width: 220px;
+      max-width: 260px;
+      height: fit-content;
+    }
+    .filters h2 {
+      color: #0078d7;
+      margin-top: 0;
+    }
+    .filter-group {
+      margin-bottom: 1.2rem;
+    }
+    .filter-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+    .filter-group select {
+      width: 100%;
+      padding: 0.4rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .products {
+      flex: 1;
+    }
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 1.5rem;
+      flex: 1 1 220px;
+      min-width: 220px;
+      max-width: 260px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .product-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .main-content {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+      }
+      .filters {
+        background: #807d7d;
+        max-width: 100%;
+        min-width: 0;
+      }
+      .product-grid {
+        justify-content: center;
+      }
+    }
+    .product-card img{
+   width:50%;
+  height: 50%;
+  object-fit: cover;
+ }
+  </style>
+</head>
+<body>
+  <header>
+     <nav>
+      <div class="logo">Content Organs</div>
+      <ul style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;list-style:none;margin:0;padding:0;">
+        <li><a href="../home-page/index.html">Home</a></li>
+        <li><a href="../about-us/index.html">About Us</a></li>
+        <li><a href="../contact-us/contact.html">Contact Us</a></li>
+        <li><a href="../service/service.html">Services</a></li>
+        <li style="position:relative;">
+          <a href="../Cambiare/cambiare-organs.html">Cambiare Organs ▼</a>
+          <ul style="position:absolute;left:0;top:100%;background:#000000;box-shadow:0 2px 8px rgba(0,0,0,0.1);padding:8px 0;min-width:180px;display:none;z-index:10;list-style:none;">
+            <li><a href="../Cambiare/Cambiare-MIDI-Console.html">MIDI Console</a></li>
+            <li><a href="../Cambiare/Cambiare-Suite-II.html">Suite II</a></li>
+            <li><a href="../Cambiare/Cambiare-Suite-III.html">Suite III</a></li>
+            <li><a href="../Cambiare/sample-sets.html">Sample Sets</a></li>
+          </ul>
+        </li>
+        <li style="position:relative;">
+          <a href="../church-organs/church-organs.html">Church Organs ▼</a>
+          <ul style="position:absolute;left:0;top:100%;background:#000000;box-shadow:0 2px 8px rgba(0,0,0,0.1);padding:8px 0;min-width:180px;display:none;z-index:10;list-style:none;">
+            <li><a href="../church-organs/chapel-227R.html">Chapel 227R</a></li>
+            <li><a href="../church-organs/chapel-236R.html">Chapel 236R</a></li>
+            <li><a href="../church-organs/Chapel-246R.html">Chapel 246R</a></li>
+            <li><a href="../church-organs/Chapel-340R.html">Chapel 340R</a></li>
+            <li><a href="../church-organs/Chapel-346R.html">Chapel 346R</a></li>
+            <li><a href="../church-organs/Chapel-354R.html">Chapel 354R</a></li>
+          </ul>
+        </li>
+        <li style="position:relative;">
+          <a href="../digital organs/digital-organs.html">Digital Organs ▼</a>
+          <ul style="position:absolute;left:0;top:100%;background:#000000;box-shadow:0 2px 8px rgba(0,0,0,0.1);padding:8px 0;min-width:180px;display:none;z-index:10;list-style:none;">
+            <li><a href="../digital organs/cantate-346.html">Cantate 346</a></li>
+            <li><a href="../digital organs/cantate-354.html">Cantate 354</a></li>
+            <li><a href="../digital organs/celeste-236.html">Celeste 236</a></li>
+            <li><a href="../digital organs/celeste-340.html">Celeste 340</a></li>
+            <li><a href="../digital organs/clavis-125.html">Clavis 125</a></li>
+            <li><a href="../digital organs/clavis-224.html">Clavis 224</a></li>
+            <li><a href="../digital organs/compact-125.html">Compact 125</a></li>
+            <li><a href="../digital organs/compact-224.html">Compact 224</a></li>
+            <li><a href="../digital organs/concerto-476.html">Concerto 476</a></li>
+            <li><a href="../digital organs/concerto-jubileo-40.html">Concerto Jubileo 40</a></li>
+            <li><a href="../digital organs/mondri-236.html">Mondri 236</a></li>
+            <li><a href="../digital organs/mondri-340.html">Mondri 340</a></li>
+            <li><a href="../digital organs/mondri-354.html">Mondri 354</a></li>
+          </ul>
+        </li>
+      </ul>
+      <script>
+        // Simple dropdown hover logic
+        document.querySelectorAll('nav ul > li[style*="position:relative"]').forEach(function(li) {
+          li.addEventListener('mouseenter',function(){
+            var ul = li.querySelector('ul');
+            if(ul) ul.style.display='block';
+          });
+          li.addEventListener('mouseleave',function(){
+            var ul = li.querySelector('ul');
+            if(ul) ul.style.display='none';
+          });
+        });
+      </script>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Cambiare Series</h1>
+      <p>Watch here our virtual pipe organs!</p>
+    </section>
+    <div class="main-content">
+      <aside class="filters">
+        <h2>Filters</h2>
+        <div class="filter-group">
+          <label>Manuals:</label>
+         <select id="manuals" onchange="filterManuals()">
+            <option value="all">All</option>
+            <option value="1 manual">1 manual</option>
+            <option value="2 manual">2 manuals</option>
+            <option value="3 manual">3 manuals</option>
+            <option value="4 manual">4 manuals</option>
+            </select>
+        </div>
+        <div class="filter-group">
+          <label>Register:</label>
+          <select id="register" onchange="filterRegister()">
+            <option value="all">All</option>
+            <option value="Via wooden drawknobs">Via wooden drawknobs</option>
+            <option value="Via touchscreens">Via touchscreens</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Furniture:</label>
+          <select id="furniture" onchange="filterFurniture()">
+            <option value="all">All</option>
+            <option value="High cabinet">High cabinet</option>
+            <option value="Standard cabinet">Standard cabinet</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Pedal:</label>
+          <select id="pedal" onchange="filterPedal()">
+            <option value="all">All</option>
+            <option value="32 note">32 note</option>
+            <option value="30 note">30 note</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Audio Option</label>
+          <select id="audio" onchange="filterAudio()">
+            <option value="all">All</option>
+            <option value="Intern">Intern</option>
+            <option value="Extern">Extern</option>
+          </select>
+        </div>
+      </aside>
+      <section class="products">
+        <div class="product-grid">
+          
+          <div class="product-card" data-manuals="2 manual" data-register="Via touchscreens" data-furniture="Standard cabinet" data-pedal="30 note" data-audio="Intern">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/5642_370x310_autocrop.webp/suite-ii-1.webp" alt="Compact 224"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\Cambiare\Cambiare-Suite-II.html">Cambiare Suite 2</a></h3>
+            <p>Cambiare organs</p>
+          </div>
+          <div class="product-card" data-manuals="3 manual" data-register="Via touchscreens" data-furniture="Standard cabinet" data-pedal="30 note" data-audio="Intern">
+          <img src="https://www.contentorgans.com/m/AAA%20Orgels/Kerken/5617_370x310_autocrop.webp/suite-iii-1.webp" alt="Compact 224"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\Cambiare\Cambiare-Suite-III.html">Cambiare Suite 3</a></h3>
+            <p>Cambiare organs</p>
+          </div>
+          <div class="product-card" data-manuals="3 manual" data-register="Via touchscreens" data-furniture="Standard cabinet" data-pedal="30 note" data-audio="Intern">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/6637_370x310_autocrop.webp/312.webp" alt="Compact 224"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\Cambiare\cambiare-312.html">Cambiare 312</a></h3>
+            <p>Cambiare organs</p>
+          </div>
+          <div class="product-card" data-manuals="2 manual,3 manual,4 manual" data-register="Via touchscreens" data-furniture="Standard cabinet" data-pedal="all" data-audio="Extern">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/5108_370x310_autocrop.webp/323.webp" alt="Compact 224"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\Cambiare\cambiare-323.html">Cambiare 323</a></h3>
+            <p>Cambiare organs</p>
+          </div>
+          <div class="product-card" data-manuals="3 manual" data-register="Via touchscreens" data-furniture="High cabinet" data-pedal="30 note" data-audio="Intern">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/6497_370x310_autocrop.webp/315.webp" alt="Compact 224"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\Cambiare\cambiare-315.html">Cambiare 315</a></h3>
+            <p>Cambiare organs</p>
+          </div>
+          <div class="product-card" data-manuals="3 manual,4 manual" data-register="Via touchscreens" data-furniture="High cabinet" data-pedal="30 note,32 note" data-audio="Intern">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/5109_370x310_autocrop.webp/325.webp" alt="Compact 224"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\Cambiare\cambiare-325.html">Cambiare 325</a></h3>
+            <p>Cambiare organs</p>
+          </div>
+          <div class="product-card" data-manuals="3 manual" data-register="Via touchscreens" data-furniture="High cabinet" data-pedal="30 note,32 note" data-audio="Intern">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/5110_370x310_autocrop.webp/335.webp" alt="Compact 224"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\Cambiare\cambiare-335.html">Cambiare 335</a></h3>
+            <p>Cambiare organs</p>
+          </div>
+          <div class="product-card" data-manuals="3 manual" data-register="Via touchscreens,Via wooden drawknobs" data-furniture="High cabinet" data-pedal="30 note,32 note" data-audio="Intern">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/5111_370x310_autocrop.webp/335.webp" alt="Compact 224"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\Cambiare\cambiare-335+.html">Cambiare 335+</a></h3>
+            <p>Cambiare organs</p>
+          </div>
+          <div class="product-card">
+            <img src="https://www.contentorgans.com/m/AAA%20Orgels/Hauptwerk/5112_370x310_autocrop.webp/midi-console.webp" alt="Compact 224"/>
+            <h3><a href="D:\Nithya\Godwin's\clone\Cambiare\Cambiare-MIDI-Console.html">Cambiare Midi Console</a></h3>
+            <p>Cambiare organs</p>
+          </div>
+        </div>
+    </section>
+    
+    <div>
+        <section>
+      <ol>
+        <li><a href="D:\Nithya\Godwin's\clone\Cambiare\Hauptwerk.html">What is Hauptwerk™?</a></li>
+        <li><a href="D:\Nithya\Godwin's\clone\Cambiare\sweelinq.html">What is Sweelinq?</a></li>
+        <li><a href="D:\Nithya\Godwin's\clone\Cambiare\why-content-cambiare.html">Why Content Cambiare?</a></li>
+        <li><a href="D:\Nithya\Godwin's\clone\Cambiare\sample-sets.html">Sample sets</a></li>
+        <li><a href="D:\Nithya\Godwin's\clone\Cambiare\experience-center.html">Experience Center</a></li>
+        <li><a href="D:\Nithya\Godwin's\clone\Cambiare\listen-to-our-cambiare-organs.html">Listen to our Cambiare organs</a></li>
+        <li><a href="D:\Nithya\Godwin's\clone\Cambiare\Our-cambiare-reference.html">Our Cambiare references</a></li>
+      </ol>
+      </section>
+      </div>
+     
+
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Content Organs. All rights reserved.</p>
+  </footer>
+  <script>
+ function filterManuals() {
+      const selected = document.getElementById("manuals").value;
+      const cards = document.querySelectorAll(".product-card");
+      cards.forEach(card => {
+               // Split the data-pedal attribute into an array, trimming spaces just in case
+      const manualsValues = card.dataset.manuals ? card.dataset.manuals.split(',').map(val => val.trim()) : [];
+
+    // Show if selected is 'all' or if pedalValues include the selected pedal value
+    if (selected === "all" || manualsValues.includes(selected)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+      });
+    }
+
+     function filterRegister() {
+      const selected = document.getElementById("register").value;
+      const cards = document.querySelectorAll(".product-card");
+      cards.forEach(card => {
+                // Split the data-pedal attribute into an array, trimming spaces just in case
+      const registerValues = card.dataset.register ? card.dataset.register.split(',').map(val => val.trim()) : [];
+
+    // Show if selected is 'all' or if pedalValues include the selected pedal value
+    if (selected === "all" || registerValues.includes(selected)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+      });
+    }
+
+    function filterFurniture() {
+      const selected = document.getElementById("furniture").value;
+      const cards = document.querySelectorAll(".product-card");
+      cards.forEach(card => {
+                // Split the data-pedal attribute into an array, trimming spaces just in case
+      const furnitureValues = card.dataset.furniture ? card.dataset.furniture.split(',').map(val => val.trim()) : [];
+
+    // Show if selected is 'all' or if pedalValues include the selected pedal value
+    if (selected === "all" || furnitureValues.includes(selected)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+      });
+    }
+
+      function filterAudio() {
+      const selected = document.getElementById("audio").value;
+      const cards = document.querySelectorAll(".product-card");
+      cards.forEach(card => {
+                // Split the data-pedal attribute into an array, trimming spaces just in case
+      //const pedalValues = card.dataset.audio ? card.dataset.audio.split(',').map(val => val.trim()) : [];
+
+    // Show if selected is 'all' or if pedalValues include the selected pedal value
+    //if (selected === "all" || audioValues.includes(selected)) {
+     // card.style.display = "block";
+    //} else {
+      //card.style.display = "none";
+   // }
+   card.style.display = selected === "all" || card.dataset.audio === selected ? "block" : "none";
+      });
+    }
+
+      function filterPedal() {
+      const selected = document.getElementById("pedal").value;
+      const cards = document.querySelectorAll(".product-card");
+      cards.forEach(card => {  
+        // Split the data-pedal attribute into an array, trimming spaces just in case
+      const pedalValues = card.dataset.pedal ? card.dataset.pedal.split(',').map(val => val.trim()) : [];
+
+    // Show if selected is 'all' or if pedalValues include the selected pedal value
+    if (selected === "all" || pedalValues.includes(selected)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+      });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cambiare organs | Content Organs</title>
+<style>
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f9f9f9;
+    color: #222;
+  }
+  h1 {
+    color: #114b8a;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    font-size: 2rem;
+  }
+  h2 {
+    color: #114b8a;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  .filters {
+    margin-bottom: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-weight: 600;
+  }
+  .filters label {
+    cursor: pointer;
+  }
+  .filters input[type=checkbox] {
+    margin-right: 0.3em;
+  }
+  .organs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(230px,1fr));
+    gap: 1.5em;
+  }
+  .organ-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    padding: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .organ-title {
+    font-weight: 700;
+    color: #114b8a;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    font-size: 1.2rem;
+  }
+  .organ-desc {
+    flex-grow: 1;
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 1em;
+  }
+  .organ-info {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  a.organs-link {
+    display: inline-block;
+    margin-top: 0.8em;
+    color: #114b8a;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+  }
+  a.organs-link:hover {
+    border-bottom-color: #114b8a;
+  }
+  footer {
+    margin-top: 3em;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+  }
+  .header-note {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 2em;
+    max-width: 700px;
+  }
+</style>
+</head>
+<body>
+
+<main role="main" aria-labelledby="mainHeading">
+  <h1 id="mainHeading">Cambiare organs</h1>
+
+  <p class="header-note">
+    Watch here our wide range of Cambiare organs. With these organs, you are able to play famous pipe organs in your living room!
+  </p>
+
+  <section aria-label="Filter organs by features" class="filters" role="region" aria-live="polite">
+    <label><input type="checkbox" value="2manuals" checked /> 2 Manuals</label>
+    <label><input type="checkbox" value="3manuals" checked /> 3 Manuals</label>
+    <label><input type="checkbox" value="4manuals" checked /> 4 Manuals</label>
+    <label><input type="checkbox" value="woodendrawknobs" checked /> Via wooden drawknobs</label>
+    <label><input type="checkbox" value="touchscreens" checked /> Via touchscreen(s)</label>
+    <label><input type="checkbox" value="standardcabinet" checked /> Standard cabinet</label>
+    <label><input type="checkbox" value="highcabinet" checked /> High cabinet</label>
+    <label><input type="checkbox" value="pedal32" checked /> 32 note Pedal</label>
+    <label><input type="checkbox" value="pedal30" checked /> 30 note Pedal</label>
+    <label><input type="checkbox" value="audiointern" checked /> Audio options: Intern</label>
+    <label><input type="checkbox" value="audioextern" checked /> Audio options: Extern</label>
+  </section>
+
+  <section id="organsGrid" class="organs-grid" aria-live="polite" aria-atomic="true">
+    <article class="organ-card" data-features="2manuals woodendrawknobs standardcabinet pedal32 audiointern">
+      <h2 class="organ-title">Cambiare 312</h2>
+      <p class="organ-desc">A Hauptwerk or Sweelinq organ with two 10" touchscreens and an improved audio system.</p>
+      <p class="organ-info">Two manuals, standard cabinet, internal audio.</p>
+      <a href="https://www.contentorgans.com/en/cambiare-organs/cambiare-312/" class="organs-link" target="_blank" rel="noopener">More info</a>
+    </article>
+    
+    <article class="organ-card" data-features="3manuals touchscreens highcabinet pedal30 audiointern">
+      <h2 class="organ-title">Cambiare 315</h2>
+      <p class="organ-desc">Brings to life the authenticity and grandeur of small and large church organs.</p>
+      <p class="organ-info">Three manuals, high cabinet, internal audio.</p>
+      <a href="https://www.contentorgans.com/en/cambiare-organs/cambiare-315/" class="organs-link" target="_blank" rel="noopener">More info</a>
+    </article>
+
+    <article class="organ-card" data-features="3manuals touchscreens highcabinet pedal32 audiointern">
+      <h2 class="organ-title">Cambiare 323</h2>
+      <p class="organ-desc">Characterized by its external sound system designed by audio specialists.</p>
+      <p class="organ-info">Three manuals, high cabinet, external audio system.</p>
+      <a href="https://www.contentorgans.com/en/cambiare-organs/cambiare-323/" class="organs-link" target="_blank" rel="noopener">More info</a>
+    </article>
+
+    <article class="organ-card" data-features="3manuals touchscreens highcabinet pedal32 audiointern">
+      <h2 class="organ-title">Cambiare 325</h2>
+      <p class="organ-desc">An extensive internal audio system with built-in surround radiation and two high-quality touchscreens.</p>
+      <p class="organ-info">Three manuals, high cabinet, internal audio, touchscreens.</p>
+      <a href="https://www.contentorgans.com/en/cambiare-organs/cambiare-325/" class="organs-link" target="_blank" rel="noopener">More info</a>
+    </article>
+
+    <article class="organ-card" data-features="4manuals touchscreens highcabinet pedal32 audiointern">
+      <h2 class="organ-title">Cambiare 335</h2>
+      <p class="organ-desc">
+        A high-end oak cabinet organ with extensive internal audio and optional expandability.
+      </p>
+      <p class="organ-info">Four manuals, high cabinet, internal audio, touchscreens.</p>
+      <a href="https://www.contentorgans.com/en/cambiare-organs/cambiare-335/" class="organs-link" target="_blank" rel="noopener">More info</a>
+    </article>
+    
+    <article class="organ-card" data-features="3manuals touchscreens highcabinet pedal32 audiointern">
+      <h2 class="organ-title">Cambiare Suite III</h2>
+      <p class="organ-desc">
+        Play church organs in your living room with a compact cabinet and integrated multi-channel audio.
+      </p>
+      <p class="organ-info">Three manuals, stylish oak cabinet, multi-channel audio system.</p>
+      <a href="https://www.contentorgans.com/en/cambiare-organs/cambiare-suite-iii/" class="organs-link" target="_blank" rel="noopener">More info</a>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>Content Organs © All rights reserved.</p>
+</footer>
+
+<script>
+  // Simple filtering logic based on checked filters
+  const checkboxes = document.querySelectorAll('.filters input[type=checkbox]');
+  const organs = document.querySelectorAll('.organ-card');
+
+  function filterOrgans() {
+    // Gather all checked filter values
+    const activeFilters = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+
+    organs.forEach(organ => {
+      const organFeatures = organ.getAttribute('data-features').split(' ');
+      // Show organ only if it matches at least one checked filter per category
+      // For simplicity, show organ only if all checked filter categories are met
+      const isVisible = activeFilters.every(filter => organFeatures.includes(filter));
+      organ.style.display = isVisible ? 'flex' : 'none';
+    });
+  }
+
+  checkboxes.forEach(cb => cb.addEventListener('change', filterOrgans));
+
+  // Initial filter application
+  filterOrgans();
+</script>
+
+</body>
+</html>

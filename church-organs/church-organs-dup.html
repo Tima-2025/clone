@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Church Organs | Content Organs</title>
+<style>
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    padding: 20px;
+  }
+  h1 {
+    color: #114b8a;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.3em;
+  }
+  p.intro {
+    max-width: 700px;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+  .filters {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  .filter-group {
+    min-width: 160px;
+  }
+  .filter-group strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #114b8a;
+    font-weight: 600;
+  }
+  .filter-group label {
+    display: block;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 4px;
+  }
+  .filter-group input[type="checkbox"] {
+    margin-right: 0.3em;
+  }
+  .organs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 1.5em;
+  }
+  .organ-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.12);
+    padding: 1.2em 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+  }
+  .organ-title {
+    color: #114b8a;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+  }
+  .organ-desc {
+    flex-grow: 1;
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0.8em;
+  }
+  .organ-info {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #666;
+  }
+  footer {
+    margin-top: 3em;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<main role="main" aria-labelledby="pageTitle">
+  <h1 id="pageTitle">Church Organs - Chapel Series</h1>
+
+  <p class="intro">
+    Watch here our church organs! The Chapel series from Content Organs offers digital pipe organ experiences, custom-built and tuned for churches,
+    chapels, and concert halls of various sizes.
+  </p>
+
+  <section class="filters" aria-label="Filter organs by features">
+    <div class="filter-group" role="group" aria-labelledby="furnitureLabel">
+      <strong id="furnitureLabel">Furniture</strong>
+      <label><input type="checkbox" value="rolltopedition" checked> Rolltop edition</label>
+    </div>
+    <div class="filter-group" role="group" aria-labelledby="manualsLabel">
+      <strong id="manualsLabel">Manuals</strong>
+      <label><input type="checkbox" value="2manuals" checked> 2</label>
+      <label><input type="checkbox" value="3manuals" checked> 3</label>
+    </div>
+    <div class="filter-group" role="group" aria-labelledby="stopsCountLabel">
+      <strong id="stopsCountLabel">Aantal registers</strong>
+      <label><input type="checkbox" value="27stops" checked> 27 stops</label>
+      <label><input type="checkbox" value="36stops" checked> 36 stops</label>
+      <label><input type="checkbox" value="46stops" checked> 46 stops</label>
+      <label><input type="checkbox" value="54stops" checked> 54 stops</label>
+    </div>
+    <div class="filter-group" role="group" aria-labelledby="stopsTypeLabel">
+      <strong id="stopsTypeLabel">Soorten registers</strong>
+      <label><input type="checkbox" value="enlighteddrawknobs" checked> Enlighted drawknobs</label>
+      <label><input type="checkbox" value="enlightedtabstops" checked> Enlighted TAB stops</label>
+    </div>
+    <div class="filter-group" role="group" aria-labelledby="pedalLabel">
+      <strong id="pedalLabel">Pedal</strong>
+      <label><input type="checkbox" value="30note" checked> 30-note</label>
+      <label><input type="checkbox" value="32note" checked> 32 note</label>
+    </div>
+  </section>
+
+  <section id="organsGrid" class="organs-grid" aria-live="polite" aria-atomic="true">
+    <article class="organ-card" data-features="rolltopedition 2manuals 27stops enlighteddrawknobs 30note">
+      <h2 class="organ-title">Chapel 227R</h2>
+      <p class="organ-desc">A beautiful digital organ featuring 2 manuals, 27 stops, and enlightened drawknobs with a classic rolltop edition cabinet.</p>
+      <p class="organ-info">2 manuals | 27 stops | Enlighted drawknobs | 30-note pedal</p>
+    </article>
+
+    <article class="organ-card" data-features="rolltopedition 3manuals 36stops enlightedtabstops 32note">
+      <h2 class="organ-title">Chapel 236R</h2>
+      <p class="organ-desc">This instrument offers 3 manuals and 36 stops with enlightened TAB stops in a rolltop edition cabinet for versatile church music.</p>
+      <p class="organ-info">3 manuals | 36 stops | Enlighted TAB stops | 32-note pedal</p>
+    </article>
+
+    <article class="organ-card" data-features="rolltopedition 3manuals 46stops enlighteddrawknobs 30note">
+      <h2 class="organ-title">Chapel 340R</h2>
+      <p class="organ-desc">An advanced Chapel series organ with 46 stops controlled through enlightened drawknobs and a 30-note pedal setup.</p>
+      <p class="organ-info">3 manuals | 46 stops | Enlighted drawknobs | 30-note pedal</p>
+    </article>
+
+    <article class="organ-card" data-features="rolltopedition 2manuals 36stops enlighteddrawknobs 32note">
+      <h2 class="organ-title">Chapel 246R</h2>
+      <p class="organ-desc">A versatile 2 manual organ, with 36 stops including enlightened drawknobs and 32-note pedal suited to various church sizes.</p>
+      <p class="organ-info">2 manuals | 36 stops | Enlighted drawknobs | 32-note pedal</p>
+    </article>
+
+    <article class="organ-card" data-features="rolltopedition 3manuals 54stops enlightedtabstops 32note">
+      <h2 class="organ-title">Chapel 346R</h2>
+      <p class="organ-desc">A rich sound organ with 3 manuals and 54 stops, featuring enlightened TAB stops and a 32-note pedal in an elegant rolltop edition.</p>
+      <p class="organ-info">3 manuals | 54 stops | Enlighted TAB stops | 32-note pedal</p>
+    </article>
+
+    <article class="organ-card" data-features="rolltopedition 3manuals 54stops enlighteddrawknobs 32note">
+      <h2 class="organ-title">Chapel 354R</h2>
+      <p class="organ-desc">High-end Chapel organ boasting 3 manuals, 54 stops, enlightened drawknobs, and a 32-note pedalboard for large chapel spaces.</p>
+      <p class="organ-info">3 manuals | 54 stops | Enlighted drawknobs | 32-note pedal</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>Content Organs © All rights reserved.</p>
+</footer>
+
+<script>
+  const checkboxes = document.querySelectorAll('.filters input[type="checkbox"]');
+  const organs = document.querySelectorAll('.organ-card');
+
+  function filterOrgans() {
+    // Collect all checked values grouped by category for AND logic filtering
+    const activeFilters = {
+      furniture: [],
+      manuals: [],
+      stopsCount: [],
+      stopsType: [],
+      pedal: []
+    };
+
+    checkboxes.forEach(cb => {
+      if (cb.checked) {
+        const parent = cb.closest('.filter-group');
+        if (!parent) return;
+        const groupLabel = parent.querySelector('strong').id;
+
+        switch(groupLabel) {
+          case 'furnitureLabel':     activeFilters.furniture.push(cb.value); break;
+          case 'manualsLabel':       activeFilters.manuals.push(cb.value); break;
+          case 'stopsCountLabel':    activeFilters.stopsCount.push(cb.value); break;
+          case 'stopsTypeLabel':     activeFilters.stopsType.push(cb.value); break;
+          case 'pedalLabel':         activeFilters.pedal.push(cb.value); break;
+        }
+      }
+    });
+
+    organs.forEach(organ => {
+      const features = organ.getAttribute('data-features').split(' ');
+      // To be shown, organ must match at least one checked filter in each filter category
+      const matchesFurniture = activeFilters.furniture.length === 0 || activeFilters.furniture.some(f => features.includes(f));
+      const matchesManuals = activeFilters.manuals.length === 0 || activeFilters.manuals.some(f => features.includes(f));
+      const matchesStopsCount = activeFilters.stopsCount.length === 0 || activeFilters.stopsCount.some(f => features.includes(f));
+      const matchesStopsType = activeFilters.stopsType.length === 0 || activeFilters.stopsType.some(f => features.includes(f));
+      const matchesPedal = activeFilters.pedal.length === 0 || activeFilters.pedal.some(f => features.includes(f));
+
+      if (matchesFurniture && matchesManuals && matchesStopsCount && matchesStopsType && matchesPedal) {
+        organ.style.display = 'flex';
+      } else {
+        organ.style.display = 'none';
+      }
+    });
+  }
+
+  checkboxes.forEach(cb => cb.addEventListener('change', filterOrgans));
+  // Initial filtering
+  filterOrgans();
+</script>
+
+</body>
+</html>

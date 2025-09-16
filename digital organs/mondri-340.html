@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Organs - Mondri 340</title>
+<style>
+  /* Reset basics */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2.6rem;
+    color: #0a3c5d;
+    font-weight: 700;
+  }
+  header p.intro {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 720px;
+    margin: 15px auto 0 auto;
+  }
+  .image-container {
+    text-align: center;
+    margin: 25px 0 40px;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  }
+  section {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+  }
+  section h2 {
+    color: #0a3c5d;
+    border-left: 6px solid #f4a300;
+    padding-left: 12px;
+    margin-bottom: 18px;
+    font-size: 1.8rem;
+  }
+  p, ul {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  ul li {
+    margin-bottom: 8px;
+  }
+  .highlight {
+    background-color: #f9f9f9;
+    border-left: 6px solid #f4a300;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+  }
+  footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding-bottom: 20px;
+    border-top: 1px solid #ddd;
+  }
+  a {
+    color: #0a3c5d;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    section h2 {
+      font-size: 1.4rem;
+    }
+    .container {
+      padding: 0 10px;
+      margin: 20px auto;
+    }
+  }
+   .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 40, 40, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+
+  .arrow:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Mondri 340</h1>
+    <p class="intro">
+      The Content Mondri series has been a well-established and consistently appreciated choice among organists for many years. The Mondri 340 is the three-manual variant offering 40 stops with four unique organ styles — Baroque, Romantic, Classical, and Symphonic — built into a sturdy positive oak cabinet. Equipped with wooden drawknobs with LED indication, a multi-channel 3D surround sound system, and a Personal Control Center for customization, it provides the immersive experience of a pipe organ in your living room or small concert hall.
+    </p>
+  </header>
+
+   <div class="carousel-container">
+  <button class="arrow arrow-left" onclick="prevImage()">&#8592;</button>
+  <img class="carousel-image" id="carouselImage" src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5350_370x310_autocrop.webp/mondri-340.webp" alt="Carousel Image"/>
+  <button class="arrow arrow-right" onclick="nextImage()">&#8594;</button>
+</div>
+
+  <section>
+    <h2>Key Features</h2>
+    <ul>
+      <li>3 manuals with touch-sensitive keyboards featuring metal cores</li>
+      <li>40 stops with four unique tonal specifications: Baroque, Romantic, Classic, Symphonic</li>
+      <li>Built into a solid oak positive organ cabinet, customizable with cornices, moldings, and French-style organ bench</li>
+      <li>Multi-channel built-in 3D surround sound system with speakers located at the bottom, front, and top for realistic sound projection</li>
+      <li>Personal Control Center for easy adjustment of stops, sound styles, volume, reverb, tremulant, and registration presets</li>
+      <li>LED lighting for pedal and music stand, wooden drawknobs with LED indicators, and wooden swell pedals</li>
+      <li>30-note straight, concave, or radial concave pedalboard options</li>
+      <li>Bench with integrated sheet music storage and additional storage behind the music stand</li>
+      <li>Optional ExtraVoice expansion offers orchestral voices like pan flute, trumpet, piano, and more</li>
+    </ul>
+  </section>
+
+ <div class="button-grid">
+  <button class="grid-button large two-line" type="button">
+    REQUEST<br>BROCHURE
+  </button>
+  <button class="grid-button large two-line" type="button">
+    FIND YOUR<br>DEALER
+  </button>
+  <button class="grid-button small" type="button">VIDEO</button>
+</div>
+
+  <section>
+    <h2>Sound Experience</h2>
+    <p>
+      The Mondri 340 offers an authentic pipe organ experience with spatial sound dynamics. The organist can select different virtual listening positions in the virtual church space with a single button press, altering acoustic conditions dynamically. The sound positioning emphasizes differences between divisions, with the Swell division sounding more distant compared to the Positive located behind the organist. This provides dynamic depth and realism.
+    </p>
+  </section>
+
+  <section>
+    <h2>Tonal Color Palette</h2>
+    <p>
+      The organ's tonal color palette includes principal voices such as prestants and flutes, foundation stops like mixtures and sharps, and reeds including trumpet, vox humana, and trombone. Solo registers like Cornet, Vox Humana, and Sesquialter allow expressive registration. Many traditional stops typical of Dutch organs feature prominently.
+    </p>
+  </section>
+
+  <section>
+    <h2>Technical Specifications</h2>
+    <div class="highlight">
+      <ul>
+        <li>3 manuals</li>
+        <li>4 x 40 stops (four independent tonal specifications)</li>
+        <li>Positive organ cabinet made of genuine oak wood</li>
+        <li>30-note flat, parallel, concave or radial concave pedal board</li>
+        <li>Keyboards with metal cores for responsive touch</li>
+        <li>Multi-channel built-in 3D surround sound system with separate surround channels</li>
+        <li>Personal Control Center (PCC) for customization and presets</li>
+        <li>Bench with sheet music storage</li>
+        <li>LED lights on pedal and music stand</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Content Organs - All rights reserved</p>
+  </footer>
+</div>
+
+<script>
+  const images = [
+  		"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20340/4403_3840x2160.webp/mondri-340-cbm111-right.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20340/4399_3840x2160.webp/mondri-340-cbm111-front.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20340/4401_3840x2160.webp/mondri-340-cbm111-left.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20340/4390_3840x2160.webp/mondri-340-cbm111-detail-1.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20340/4391_3840x2160.webp/mondri-340-cbm111-detail-2.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20340/4397_3840x2160.webp/mondri-340-cbm111-detail-8.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20340/4396_3840x2160.webp/mondri-340-cbm111-detail-7.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Mondri%20340/4394_3840x2160.webp/mondri-340-cbm111-detail-5.webp"
+]
+  let currentIndex = 0;
+  const carouselImage = document.getElementById('carouselImage');
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length ;
+    showImage(currentIndex);
+  }
+  /* const btn = document.getElementById('showListBtn');
+  const list = document.getElementById('itemList');
+
+  btn.addEventListener('click', () => {
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';  // Show list
+      //btn.textContent = 'Hide Items'; // Change button text
+    } else {
+      list.style.display = 'none';   // Hide list
+      //btn.textContent = 'Show Items'; // Reset button text
+    }
+  }); */
+
+  // Optional JavaScript functionality can be added here if needed
+  // For example, click actions on buttons:
+ const buttons = document.querySelectorAll('.grid-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`You clicked "${btn.textContent.replace('\n',' ')}" button.`);
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

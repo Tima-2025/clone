@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Organs - Chapel 354R</title>
+<style>
+  /* Reset margins and paddings */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 40px;
+  }
+  a {
+    color: #0a3c5d;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #0a3c5d;
+  }
+  header p.intro {
+    font-style: italic;
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 720px;
+    margin: 15px auto 0 auto;
+  }
+  .image-container {
+    text-align: center;
+    margin: 25px 0 40px;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.12);
+  }
+  section {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+  }
+  section h2 {
+    font-size: 1.9rem;
+    color: #0a3c5d;
+    border-left: 6px solid #f4a300;
+    padding-left: 14px;
+    margin-bottom: 25px;
+  }
+  section h3 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #0a3c5d;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  p, ul {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  ul li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .highlight {
+    background-color: #f9f9f9;
+    border-left: 6px solid #f4a300;
+    padding: 18px 20px;
+    margin-bottom: 30px;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    section h2 {
+      font-size: 1.5rem;
+    }
+    section h3 {
+      font-size: 1.15rem;
+    }
+    p, ul {
+      font-size: 0.95rem;
+    }
+    .container {
+      padding: 0 10px;
+      margin: 20px auto;
+    }
+  }
+  .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 40, 40, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+
+  .arrow:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+  
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Chapel 354R</h1>
+    <p class="intro">
+      The Chapel 354R brings together everything optimally. This model in a solid oak organ console is delivered as standard with wooden drawknobs on either side of the manuals. This provides the model with the optimal experience of a pipe organ. Various pedal, bench, and manual variants complete the comfort for every organist. Additionally, this organ features the advanced Content Chapel audio system, with built-in monitor speakers as options for larger spaces.
+    </p>
+  </header>
+
+  <div class="carousel-container">
+  <button class="arrow arrow-left" onclick="prevImage()">&#8592;</button>
+  <img class="carousel-image" id="carouselImage" src="https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6314_3840x2160.webp/chapel-354r-cbm261-wds-left.webp" alt="Carousel Image"/>
+  <button class="arrow arrow-right" onclick="nextImage()">&#8594;</button>
+</div>
+  <section>
+    <h2>Various cultures in one organ</h2>
+    <p>
+      The four different tonal worlds included as standard with this organ have been compiled by Content from voicing material sourced from various historical pipe organs in Europe. The tonal character is characterized by clarity and carrying capacity. The German Baroque style is a representative representation in the style of organ builders such as Schnitger, the Dutch Classical organ is influenced by builders Bätz and Witte, the French Romantic tonal world is modeled after Cavaillé-Coll organs, and for the English Symphonic world, various organs from the English choral tradition served as inspiration.
+    </p>
+  </section>
+
+  <section>
+    <h2>For every church building</h2>
+    <p>
+      With the aforementioned advanced audio system, various speaker configurations are possible. This makes the Chapel 354R one of the most flexible church organs from Content. There is the option to give each division (manual) its own physical position. This can, for example, symbolize a historical organ façade, a choir arrangement as customary in English cathedrals, or a unique setup fitting within your (church) space. There is also the possibility to position various stops on separate channels or speakers, such as placing soft strings from the Swell division at a position above the organ façade. Thus, in collaboration with organists and church members, a custom organ façade is realized.
+    </p>
+  </section>
+  <div class="button-grid">
+  <button class="grid-button large two-line" type="button">
+    REQUEST<br>BROCHURE
+  </button>
+  <button class="grid-button large two-line" type="button">
+    FIND YOUR<br>DEALER
+  </button>
+  <button class="grid-button small" type="button">VIDEO</button>
+  <button class="grid-button small" type="button">SPECIFICATIONS</button>
+</div>
+
+  <section>
+    <h2>High-quality organ sound through multi-channel audio systems</h2>
+    <p>"Quality is our most important stop." This promise is one that Content Organs is proud to uphold. An included 8-channel audio system can be expanded to as many as 32 separate audio channels, allowing for the highest quality and expansive tonal representation. Since each channel has various speakers, it is possible to fulfill the desire for "each speaker having a stop." This significantly enhances the carrying capacity of the instrument, especially when it comes to accompanying congregational or choral singing.</p>
+  </section>
+
+  <section>
+    <h2>Specifications</h2>
+    <div class="highlight" aria-label="Specifications summary">
+      <ul>
+        <li>3 touch-sensitive keyboards</li>
+        <li>4x 54 illuminated or mechanical movable stops</li>
+        <li>4 unique tonal styles</li>
+        <li>External speakers (monitor system option)</li>
+        <li>Multi-channel audio system</li>
+        <li>Maximum flexible technical capabilities</li>
+        <li>Fully customizable voicing</li>
+        <li>Suitable for churches and halls with up to over 1000 attendance</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Stop list overview</h2>
+
+    <h3>Pedal (13 stops)</h3>
+    <ul>
+      <li>Principal 32'</li>
+      <li>Octav 16'</li>
+      <li>Subbas 16'</li>
+      <li>Octav 8'</li>
+      <li>Octav 4'</li>
+      <li>Nachthorn 2'</li>
+      <li>Rauschpfeiffe II fach</li>
+      <li>Mixtur IV fach</li>
+      <li>Posaun 32'</li>
+      <li>Posaun 16'</li>
+      <li>Trommet 8'</li>
+      <li>Trommet 4'</li>
+      <li>Cornet 2'</li>
+      <li>Koppel Ped.-R.P.</li>
+      <li>Koppel Ped.-Werck</li>
+      <li>Koppel Ped.-O.P.</li>
+    </ul>
+
+    <h3>Ruck Positiv (13 stops)</h3>
+    <ul>
+      <li>Principal 8'</li>
+      <li>Gedackt 8'</li>
+      <li>Quintadena 8'</li>
+      <li>Octav 4'</li>
+      <li>Blockfloit 4'</li>
+      <li>Octav 2'</li>
+      <li>Waldfloit 2'</li>
+      <li>Ziffloit 1 1/2'</li>
+      <li>Sexquialt II fach</li>
+      <li>Scharff IV fach</li>
+      <li>Cimbel III fach</li>
+      <li>Dulcian 16'</li>
+      <li>Regal 8'</li>
+      <li>Tremulant</li>
+      <li>Koppel R.P.-O.P.</li>
+    </ul>
+
+    <h3>Werck (13 stops)</h3>
+    <ul>
+      <li>Principal 16'</li>
+      <li>Quintadena 16'</li>
+      <li>Octav 8'</li>
+      <li>Hollfloit 8'</li>
+      <li>Octav 4'</li>
+      <li>Rohrfloit 4'</li>
+      <li>Quinta 3'</li>
+      <li>Super Octav 2'</li>
+      <li>Tertian II fach</li>
+      <li>Mixtur VI fach</li>
+      <li>Cimbel III fach</li>
+      <li>Trommet 16'</li>
+      <li>Trommet 8'</li>
+      <li>Tremulant</li>
+      <li>Koppel Werck-R.P.</li>
+      <li>Koppel Werck-O.P.</li>
+    </ul>
+
+    <h3>Ober Positiv (15 stops)</h3>
+    <ul>
+      <li>Gedackt 16'</li>
+      <li>Principal 8'</li>
+      <li>Rohrfloit 8'</li>
+      <li>Quintadena 8'</li>
+      <li>Quinta 6'</li>
+      <li>Octav 4'</li>
+      <li>Spitzfloit 4'</li>
+      <li>Nasat 3'</li>
+      <li>Flachfloit 2'</li>
+      <li>Sexquialt III fach</li>
+      <li>Rauschpfeiffe II fach</li>
+      <li>Scharff IV fach</li>
+      <li>Trommet 8'</li>
+      <li>Vox Humana 8'</li>
+      <li>Schalmey 4'</li>
+      <li>Tremulant</li>
+    </ul>
+
+    <h3>Pedaal (13 stops)</h3>
+    <ul>
+      <li>Bourdon 32 Vt</li>
+      <li>Praestant 16 Vt</li>
+      <li>Subbas 16 Vt</li>
+      <li>Violon 16 Vt</li>
+      <li>Octaaf 8 Vt</li>
+      <li>Gedekt 8 Vt</li>
+      <li>Octaaf 4 Vt</li>
+      <li>Mixtuur 4 St.</li>
+      <li>Fagot 32 Vt</li>
+      <li>Bazuin 16 Vt</li>
+      <li>Fagot 16 Vt</li>
+      <li>Trompet 8 Vt</li>
+      <li>Schalmy 4 Vt</li>
+      <li>Koppel Ped.-Pos</li>
+      <li>Koppel Ped.-Hw.</li>
+      <li>Koppel Ped.-Zw.</li>
+    </ul>
+
+    <h3>Positief (13 stops)</h3>
+    <ul>
+      <li>Praestant 8 Vt</li>
+      <li>Holpyp 8 Vt</li>
+      <li>Fluyt Douce 8 Vt</li>
+      <li>Octaaf 4 Vt</li>
+      <li>Roorfluyt 4 Vt</li>
+      <li>Quintfluyt 3 Vt</li>
+      <li>Woudfluyt 2 Vt</li>
+      <li>Terts 1 3/5Vt</li>
+      <li>Sifflet 1 Vt</li>
+      <li>Cornet 3 St.</li>
+      <li>Mixtuur 4 St.</li>
+      <li>Fagot 16 Vt</li>
+      <li>Dulciaan 8 Vt</li>
+      <li>Tremulant</li>
+      <li>Koppel Pos.-Zw.</li>
+    </ul>
+
+    <h3>Hoofdwerk (13 stops)</h3>
+    <ul>
+      <li>Praestant 16 Vt</li>
+      <li>Octaaf 8 Vt</li>
+      <li>Roorfluyt 8 Vt</li>
+      <li>Viola 8 Vt</li>
+      <li>Roorquint 6 Vt</li>
+      <li>Octaaf 4 Vt</li>
+      <li>Speelfluyt 4 Vt</li>
+      <li>Quint 3 Vt</li>
+      <li>Octaaf 2 Vt</li>
+      <li>Cornet 5 St.</li>
+      <li>Mixtuur 5 St.</li>
+      <li>Scherp 3 St.</li>
+      <li>Trompet 16 Vt</li>
+      <li>Trompet 8 Vt</li>
+      <li>Tremulant</li>
+      <li>Koppel Hw.-Pos.</li>
+      <li>Koppel Hw.-Zw.</li>
+    </ul>
+
+    <h3>Zwelwerk (15 stops)</h3>
+    <ul>
+      <li>Bourdon 16 Vt</li>
+      <li>Salicionaal 8 Vt</li>
+      <li>Baarpyp 8 Vt</li>
+      <li>Quintadeen 8 Vt</li>
+      <li>Gamba 8 Vt</li>
+      <li>Céleste 8 Vt</li>
+      <li>Salicet 4 Vt</li>
+      <li>Fluyt 4 Vt</li>
+      <li>Nasard 3 Vt</li>
+      <li>Gemshoorn 2 Vt</li>
+      <li>Terts 1 3/5 Vt</li>
+      <li>Flageolet 1 Vt</li>
+      <li>Mixtuur 4 St.</li>
+      <li>Schalmy 8 Vt</li>
+      <li>Vox Humana 8 Vt</li>
+      <li>Tremulant</li>
+    </ul>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Content Organs - All rights reserved</p>
+  </footer>
+
+</div>
+<script>
+  const images = [
+    "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6314_3840x2160.webp/chapel-354r-cbm261-wds-left.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6313_3840x2160.webp/chapel-354r-cbm261-wds-front.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6315_3840x2160.webp/chapel-354r-cbm261-wds-right.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6298_3840x2160.webp/chapel-354r-cbm261-wds-detail-1.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6299_3840x2160.webp/chapel-354r-cbm261-wds-detail-2.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6300_3840x2160.webp/chapel-354r-cbm261-wds-detail-3.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6301_3840x2160.webp/chapel-354r-cbm261-wds-detail-4.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6302_3840x2160.webp/chapel-354r-cbm261-wds-detail-5.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6304_3840x2160.webp/chapel-354r-cbm261-wds-detail-6.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6305_3840x2160.webp/chapel-354r-cbm261-wds-detail-7.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6306_3840x2160.webp/chapel-354r-cbm261-wds-detail-8.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6307_3840x2160.webp/chapel-354r-cbm261-wds-detail-9.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6308_3840x2160.webp/chapel-354r-cbm261-wds-detail-10.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6309_3840x2160.webp/chapel-354r-cbm261-wds-detail-11.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6310_3840x2160.webp/chapel-354r-cbm261-wds-detail-12.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6311_3840x2160.webp/chapel-354r-cbm261-wds-detail-13.webp",
+  "https://www.contentorgans.com/m/AAA%20Orgels/Kerken/6312_3840x2160.webp/chapel-354r-cbm261-wds-detail-14.webp"
+  ];
+
+  let currentIndex = 0;
+  const carouselImage = document.getElementById('carouselImage');
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length ;
+    showImage(currentIndex);
+  }
+   const btn = document.getElementById('showListBtn');
+  const list = document.getElementById('itemList');
+
+  btn.addEventListener('click', () => {
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';  // Show list
+      //btn.textContent = 'Hide Items'; // Change button text
+    } else {
+      list.style.display = 'none';   // Hide list
+      //btn.textContent = 'Show Items'; // Reset button text
+    }
+  });
+
+
+  // Optional JavaScript functionality can be added here if needed
+  // For example, click actions on buttons:
+  const buttons = document.querySelectorAll('.grid-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`You clicked "${btn.textContent.replace('\n',' ')}" button.`);
+    });
+  });
+</script>
+
+
+</body>
+</html>

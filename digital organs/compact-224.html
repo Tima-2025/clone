@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Organs - Compact 224</title>
+<style>
+  /* Reset some basics */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.5;
+  }
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #0a3c5d;
+  }
+  .intro {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+  }
+  section {
+    margin-top: 40px;
+  }
+  section h2 {
+    color: #0a3c5d;
+    border-left: 4px solid #f4a300;
+    padding-left: 10px;
+    margin-bottom: 15px;
+  }
+  p, ul {
+    margin-bottom: 15px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  .image-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  /* Highlight blocks for features */
+  .features {
+    background: #f9f9f9;
+    border-left: 6px solid #f4a300;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+  }
+  .specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  .specs-table th, .specs-table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  .specs-table th {
+    background-color: #f4a300;
+    color: white;
+  }
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding-bottom: 20px;
+    border-top: 1px solid #ddd;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container {
+      margin: 20px;
+      padding: 0 10px;
+    }
+  }
+    .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 40, 40, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+
+  .arrow:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+  #itemList {
+    display: none;
+    margin-top: 15px;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    max-width: 300px;
+    background: #f9f9f9;
+  }
+   #itemList li {
+   
+    margin-bottom: 8px;
+  }
+  #showListBtn {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 260px;
+  text-align: center;
+  transition: transform 0.2s;
+
+  }
+  .listbtn:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  }
+   /* Container grid for 4 buttons */
+  .button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(2, 70px);
+    gap: 20px 50px; /* vertical gap 20px, horizontal 50px */
+  }
+
+  /* Style buttons */
+  .grid-button {
+    background: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 15px;
+    user-select: none;
+    transition: border-color 0.3s ease;
+  }
+
+  /* For large buttons (top two) - taller */
+  .grid-button.large {
+    height: 70px;
+  }
+
+  /* For smaller buttons (bottom two) */
+  .grid-button.small {
+    height: 45px;
+  }
+
+  /* Hover and focus border */
+  .grid-button:hover,
+  .grid-button:focus {
+    border: 1px solid #333;
+    outline: none;
+  }
+
+  /* Split text in two lines for buttons that require */
+  .two-line {
+    white-space: pre-line; /* respects newlines */
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Compact 224</h1>
+    <p class="intro">A complete organ, in a compact size. Versatile and refined digital organ with 4 unique sound worlds and extensive options.</p>
+  </header>
+
+
+
+ <div class="carousel-container">
+  <button class="arrow arrow-left" onclick="prevImage()">&#8592;</button>
+  <img class="carousel-image" id="carouselImage" src="https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/5343_370x310_autocrop.webp/compact-224.webp" alt="Carousel Image"/>
+  <button class="arrow arrow-right" onclick="nextImage()">&#8594;</button>
+</div>
+
+  <section>
+    <h2>Audio: Internal or External</h2>
+    <p>The Compact 224 offers flexibility with internal or external high-quality audio options. The internal audio setup includes multi-channel speakers built into the compact oak furniture, featuring tweeters that enrich the sound experience.</p>
+    <p>Alternatively, the external audio option allows connection to the Content Home 8 audio system, which includes two speaker housings made of oak for a broad and full organ sound, ideal for larger rooms or chapels.</p>
+  </section>
+
+  <div class="button-grid">
+  <button class="grid-button large two-line" type="button">
+    REQUEST<br>BROCHURE
+  </button>
+  <button class="grid-button large two-line" type="button">
+    FIND YOUR<br>DEALER
+  </button>
+  <button class="grid-button small" type="button">VIDEO</button>
+ 
+
+</div>
+
+  <section>
+    <h2>Extensive Capabilities</h2>
+    <p>The organ is configurable with various options, including a standard internal setup with 2 x 30 watt amplifiers. Optional upgrades include 4 x 180 watt amplifiers and the high-end Content audio system for optimal sound placement in different environments.</p>
+    <p>You may also connect your speakers or use headphones. Additional expansions include pedalboards, swell pedals, benches with stands (metal or wooden), providing customizable flexibility for musicians.</p>
+  </section>
+
+  <section>
+    <h2>Specifications</h2>
+    <table class="specs-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Manuals</td><td>2 x 61 notes (keyboards)</td></tr>
+        <tr><td>Stops</td><td>4 x 24 speaking stops per organ style</td></tr>
+        <tr><td>Presets</td><td>384 programmable presets per organ style</td></tr>
+        <tr><td>Amplifiers (standard)</td><td>2 x 30 Watt digital amplifiers</td></tr>
+        <tr><td>Amplifiers (optional upgrade)</td><td>4 x 180 Watt digital amplifiers</td></tr>
+        <tr><td>Size (Height)</td><td>21 cm (without music rack) / 42 cm (with music rack)</td></tr>
+        <tr><td>Width</td><td>90 cm</td></tr>
+        <tr><td>Depth</td><td>48 cm (without pedalboard)</td></tr>
+        <tr><td>Weight</td><td>22 kg</td></tr>
+        <tr><td>Materials</td><td>Solid oak wood for console and housing</td></tr>
+        <tr><td>Audio</td><td>Internal or external (Home 8) options</td></tr>
+        <tr><td>Pedalboard (optional)</td><td>30-note (C-f1) pedalboards (parallel, concave, radial concave available)</td></tr>
+        <tr><td>Accessories (optional)</td><td>Expression pedal, bench with music storage, Z-stand, swell pedal</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Stop List Highlights</h2>
+    <p>The Compact 224's stop list is comprehensive, with 4 specifications: Baroque, Classic, Romantic, and Symphonic. Each has distinctive stops, providing a wide palette of tonal options for versatile playing styles.</p>
+    <ul>
+      <li><strong>Pedal:</strong> 16' Subbass, 8' Oktavbass, 4' Choralbass, 16' Posaune, 4' Cornet, various couplers</li>
+      <li><strong>Hauptwerk:</strong> 16' Quintadena, 8' Prinzipal, 8' Rohrflöte, 4' Oktave, mixture stops, trumpet, tremulant</li>
+      <li><strong>Pedaal:</strong> 16' VtSubbas, 8' VtOctaaf, 8' VtGedekt, 16' VtFagot</li>
+      <li><strong>Great:</strong> 16' Bourdon, 8' Open Diapason, 8' Stopped Diapason, multiple flute and principal stops</li>
+    </ul>
+    <p>For full detailed stop listings, please consult the official <a href="https://www.contentorgans.com/en/digital-organs/compact-224/" target="_blank" rel="noopener">Content Organs Compact 224 page</a>.</p>
+  </section>
+
+   <section>
+    <h2>General</h2>
+    <ul>
+      <li>2 manuals (keyboards), 61 notes each</li>
+      <li>Solid organ console made of solid wood (oak)</li>
+      <li>4 unique sound styles: Baroque, Classic, Romantic, Symphonic</li>
+      <li>24 speaking stops per organ style</li>
+      <li>384 programmable presets per organ style</li>
+      <li>VPP (Virtual Player Position) technology</li>
+      <li>Option for internal or external (HQ) audio systems</li>
+      <li>Optional: 30-note pedalboard (various types), organ bench, Z-stand, and swell pedal</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Content Organs - All rights reserved</p>
+  </footer>
+</div>
+
+<script>
+  const images = [
+    "https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5377_3840x2160.webp/compact-224-cbm121-left.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5376_3840x2160.webp/compact-224-cbm121-front.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5378_3840x2160.webp/compact-224-cbm121-right.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5375_3840x2160.webp/compact-224-cbm121-detail-9.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5374_3840x2160.webp/compact-224-cbm121-detail-8.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5373_3840x2160.webp/compact-224-cbm121-detail-7.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5372_3840x2160.webp/compact-224-cbm121-detail-6.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5371_3840x2160.webp/compact-224-cbm121-detail-5.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5370_3840x2160.webp/compact-224-cbm121-detail-4.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5369_3840x2160.webp/compact-224-cbm121-detail-3.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5368_3840x2160.webp/compact-224-cbm121-detail-2.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/A%20Home/Compact%20224/5367_3840x2160.webp/compact-224-cbm121-detail-1.webp"
+
+
+  ];
+
+  let currentIndex = 0;
+  const carouselImage = document.getElementById('carouselImage');
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length ;
+    showImage(currentIndex);
+  }
+  /* const btn = document.getElementById('showListBtn');
+  const list = document.getElementById('itemList');
+
+  btn.addEventListener('click', () => {
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';  // Show list
+      //btn.textContent = 'Hide Items'; // Change button text
+    } else {
+      list.style.display = 'none';   // Hide list
+      //btn.textContent = 'Show Items'; // Reset button text
+    }
+  }); */
+
+  // Optional JavaScript functionality can be added here if needed
+  // For example, click actions on buttons:
+ const buttons = document.querySelectorAll('.grid-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`You clicked "${btn.textContent.replace('\n',' ')}" button.`);
+    });
+  });
+
+</script>
+
+</body>
+</html>

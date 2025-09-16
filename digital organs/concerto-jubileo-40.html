@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Content Organs - Concerto Jubileo 40</title>
+<style>
+  /* Reset basic elements */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0; padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+  }
+  a {
+    color: #0a3c5d;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  header {
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2.8rem;
+    color: #0a3c5d;
+    font-weight: 700;
+  }
+  header p.intro {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 720px;
+    margin: 15px auto 0 auto;
+  }
+  .image-container {
+    text-align: center;
+    margin: 25px 0 40px;
+  }
+  /* Placeholder for product image - replace src if desired */
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.12);
+  }
+  section {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+  }
+  section h2 {
+    color: #0a3c5d;
+    border-left: 6px solid #f4a300;
+    padding-left: 12px;
+    margin-bottom: 18px;
+    font-size: 1.8rem;
+  }
+  section h3 {
+    color: #0a3c5d;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+  p, ul {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+  }
+  ul li {
+    margin-bottom: 8px;
+  }
+  .highlight {
+    background-color: #f9f9f9;
+    border-left: 6px solid #f4a300;
+    padding: 15px 20px;
+    margin-bottom: 40px;
+  }
+  footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding-bottom: 20px;
+    border-top: 1px solid #ddd;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    section h2 {
+      font-size: 1.4rem;
+    }
+    .container {
+      padding: 0 10px;
+      margin: 20px auto;
+    }
+  }
+  .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+  }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(40, 40, 40, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+  }
+
+  .arrow:hover {
+    background-color: rgba(40, 40, 40, 0.8);
+  }
+
+  .arrow-left {
+    left: 10px;
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Concerto Jubileo 40</h1>
+    <p class="intro">The Content Concerto Jubileo 40 is an organ built in celebration of the 40th anniversary of Content Organs in 2020. It incorporates a high-quality Kienle pipe-resonance system, combining the authenticity of pipe organ sound with the flexibility of digital organ technology.</p>
+  </header>
+
+  <div class="carousel-container">
+  <button class="arrow arrow-left" onclick="prevImage()">&#8592;</button>
+  <img class="carousel-image" id="carouselImage" src="https://www.contentorgans.com/m/AAA%20Orgels/Custom/3892_3840x2160.webp/concerto-jubileo-40-22913.webp" alt="Carousel Image"/>
+  <button class="arrow arrow-right" onclick="nextImage()">&#8594;</button>
+</div>
+
+  <section>
+    <h2>'My organ is my orchestra.'</h2>
+    <p>A well-known saying by the French organist and composer Cesar Franck, the phrase describes the richness of tone and versatility inherent in the organ. The Concerto Jubileo 40 offers a wide palette of foundation stops, compound stops, and reed stops. Well-known solo stops such as Cornet, Vox Humana, Trompet, or Sesquialter are all present, enabling musicians to explore the vast tonal colors of the ancient pipe organ tradition.</p>
+  </section>
+
+<div class="button-grid">
+  <button class="grid-button large two-line" type="button">
+    REQUEST<br>BROCHURE
+  </button>
+  <button class="grid-button large two-line" type="button">
+    FIND YOUR<br>DEALER
+  </button>
+  <button class="grid-button small" type="button">VIDEO</button>
+</div>
+
+  <section>
+    <h2>Kienle® Pipe-Resonator System</h2>
+    <h3>Based on the ancient pipe organ</h3>
+    <p>A pipe organ produces sound using numerous pipes, each imitating various instruments — trumpets, flutes, oboes — or unique organ voices such as principals and octaves. Stops select which pipes are engaged when keys are played. The pipe’s size, shape, and material influence the sound. Principals produce resonant tones, flutes softer ones, mixtures create bright harmonics, and reeds like the 16’ trumpet produce low, dark tones.</p>
+    
+    <h3>What are Kienle® systems?</h3>
+    <p>The German organ builder Ewald Kienle (1928–2022) pioneered the combination of digital organ sound production with genuine pipe resonance by embedding speakers inside organ pipes. This patented technology precisely controls sound development within pipes, delivering authentically rich pipe organ sound and resonance even in varying temperature conditions. Content Organs is the exclusive global supplier of Kienle® pipe-resonator systems.</p>
+    
+    <p>Experience the unique acoustic benefits of Kienle® pipe-resonator technology at the Content Organs concert hall in Ermelo.</p>
+  </section>
+
+  <section>
+    <h2>Specifications</h2>
+    <div class="highlight">
+      <ul>
+        <li>4 velocity-sensitive keyboards (manuals)</li>
+        <li>4 independent organ sound styles</li>
+        <li>4 x 76 wooden drawknobs (stops)</li>
+        <li>10 x 22 General Presets per sound style</li>
+        <li>Advanced convolution reverb technology</li>
+        <li>ExtraVoice with 128 programmable orchestral voices</li>
+        <li>High-quality Kienle® pipe-resonator system for authentic pipe organ sound</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Content Organs - All rights reserved</p>
+  </footer>
+</div>
+
+<script>
+  const images = [
+ "https://www.contentorgans.com/m/AAA%20Orgels/Custom/3892_3840x2160.webp/concerto-jubileo-40-22913.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3891_3840x2160.webp/concerto-jubileo-40-1.webp",
+	"https://www.contentorgans.com/m/Content%20Orgels/Digitale%20orgels/155_3840x2160.webp/concerto-jubileo-40-9.webp",
+	"https://www.contentorgans.com/m/Content%20Orgels/Digitale%20orgels/154_3840x2160.webp/concerto-jubileo-40-8.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3904_3840x2160.webp/concerto-jubileo-40-14.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3903_3840x2160.webp/concerto-jubileo-40-13.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3902_3840x2160.webp/concerto-jubileo-40-12.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3901_3840x2160.webp/concerto-jubileo-40-11.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3900_3840x2160.webp/concerto-jubileo-40-10.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3899_3840x2160.webp/concerto-jubileo-40-9.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3898_3840x2160.webp/concerto-jubileo-40-8.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3897_3840x2160.webp/concerto-jubileo-40-7.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3896_3840x2160.webp/concerto-jubileo-40-6.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3895_3840x2160.webp/concerto-jubileo-40-5.webp",
+	"https://www.contentorgans.com/m/AAA%20Orgels/Custom/3894_3840x2160.webp/concerto-jubileo-40-4.webp"
+
+
+
+]
+  let currentIndex = 0;
+  const carouselImage = document.getElementById('carouselImage');
+
+  function showImage(index) {
+    carouselImage.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length ;
+    showImage(currentIndex);
+  }
+  /* const btn = document.getElementById('showListBtn');
+  const list = document.getElementById('itemList');
+
+  btn.addEventListener('click', () => {
+    if (list.style.display === 'none' || list.style.display === '') {
+      list.style.display = 'block';  // Show list
+      //btn.textContent = 'Hide Items'; // Change button text
+    } else {
+      list.style.display = 'none';   // Hide list
+      //btn.textContent = 'Show Items'; // Reset button text
+    }
+  }); */
+
+  // Optional JavaScript functionality can be added here if needed
+  // For example, click actions on buttons:
+ const buttons = document.querySelectorAll('.grid-button');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert(`You clicked "${btn.textContent.replace('\n',' ')}" button.`);
+    });
+  });
+</script>
+
+</body>
+</html>
