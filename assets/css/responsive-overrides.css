@@ -1,0 +1,58 @@
+/* Small responsive overrides to fix mobile overflow and footer stacking across pages */
+
+/* Ensure body can scroll and prevent horizontal overflow caused by 100vw usage */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Target common footer blocks that used width:100vw inline: make them full width and reduce padding */
+.footer {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 28px 12px 32px 12px !important;
+}
+
+.footer-left {
+  margin-left: 12px !important;
+}
+
+.footer-center {
+  width: auto !important;
+}
+
+.footer-map {
+  margin-right: 12px !important;
+  max-width: 100% !important;
+}
+
+/* Stack footer columns on narrow screens */
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+  .footer-left, .footer-center, .footer-map {
+    width: 100% !important;
+    margin: 0 12px !important;
+  }
+  .footer-map { margin-top: 12px !important; justify-content: flex-start !important; }
+}
+
+/* Navbar small screen wrap */
+@media (max-width: 768px) {
+  .site-nav { padding-left: 12px !important; padding-right: 12px !important; }
+  .menu { flex-wrap: wrap !important; }
+  .menu.center-menu { width: 100% !important; order: 2; }
+  .menu.right-menu { order: 3; margin-left: auto !important; }
+  .brand-container { order: 1; }
+}
+
+/* Make hero pinned buttons size-friendly on very small devices */
+@media (max-width: 420px){
+  .bh-buttons { left: 8px !important; right: 8px !important; bottom: 8px !important; }
+  .bh-btn { padding: 10px 12px !important; border-radius: 10px !important; }
+  .bh-label { font-size: 16px !important; }
+  .bh-kicker { font-size: 10px !important; }
+}

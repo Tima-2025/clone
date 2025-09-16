@@ -270,13 +270,401 @@
     .info a:hover {
       border-color: var(--text);
     }
+.footer {
+  width: 100vw;
+  padding: 40px 0 40px 0;
+  background: #363636;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.footer-left {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  text-align: left;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  font-family: 'Times New Roman', serif;
+}
+
+.logo-circle {
+  background: #ffe157;
+  color: #fff;
+  font-weight: bold;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.65rem;
+  margin-left: 10px;
+  position: relative;
+}
+
+.logo-circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 7px;
+  left: 8px;
+  width: 16px;
+  height: 5px;
+  border-radius: 2.5px;
+  background: #fff;
+}
+
+.address {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+.footer-contact {
+  margin-top: 25px;
+}
+
+.footer-contact div {
+  display: flex;
+  align-items: left;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.footer-contact i {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.footer-center {
+  width: 65%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: left;
+  gap: 48px;
+}
+
+.menu-col {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.15em;
+  min-width: 160px;
+}
+
+.service-col {
+  min-width: 120px;
+}
+
+.menu-head {
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #fff;
+}
+
+.menu-item {
+  color: #fff;
+  margin: 7px 0 0 0;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+.menu-item i {
+  margin-left: 6px;
+  font-size: 0.93em;
+  color: #fff;
+}
+
+.lang-row {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.flag img {
+  width: 28px;
+  height: 21px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-right: 6px;
+  border: 1px solid #eee;
+  background: #fff;
+}
+
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.icon-svg {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+.icon-svg svg {
+  display: block;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.footer {
+  width: 100vw;
+  padding: 40px 0 40px 0;
+  background: #363636;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.footer-left {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  text-align: left;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  font-family: 'Times New Roman', serif;
+}
+
+.logo-circle {
+  background: #ffe157;
+  color: #fff;
+  font-weight: bold;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.65rem;
+  margin-left: 10px;
+  position: relative;
+}
+
+.logo-circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 7px;
+  left: 8px;
+  width: 16px;
+  height: 5px;
+  border-radius: 2.5px;
+  background: #fff;
+}
+
+.address {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+.footer-contact {
+  margin-top: 25px;
+}
+
+.footer-contact div {
+  display: flex;
+  align-items: left;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.footer-contact i {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.footer-center {
+  width: 65%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: left;
+  gap: 48px;
+}
+
+.menu-col {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.15em;
+  min-width: 160px;
+}
+
+.service-col {
+  min-width: 120px;
+}
+
+.menu-head {
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #fff;
+}
+
+.menu-item {
+  color: #fff;
+  margin: 7px 0 0 0;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+.menu-item i {
+  margin-left: 6px;
+  font-size: 0.93em;
+  color: #fff;
+}
+
+.lang-row {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.flag img {
+  width: 28px;
+  height: 21px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-right: 6px;
+  border: 1px solid #eee;
+  background: #fff;
+}
+
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.icon-svg {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+.icon-svg svg {
+  display: block;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+
+
+
+
+@media (max-width: 900px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Right-end map column */
+.footer-map {
+  width: 28%;
+  max-width: 420px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive iframe wrapper (16:9 default; adjust padding-bottom as needed) */
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Make iframe fill wrapper */
+.map-iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  border: 0;
+}
+
+/* Adjust existing columns to make space */
+.footer-left { width: 28%; }
+.footer-center { width: 44%; justify-content: flex-start; }
+.footer-menu { justify-content: left; gap: 48px; }
+
+/* Mobile stacking (example breakpoint) */
+@media (max-width: 900px) {
+  .footer { flex-direction: column; align-items: stretch; }
+  .footer-left, .footer-center, .footer-map {
+    width: 100%;
+    margin: 0 20px;
+  }
+  .footer-map { margin-top: 24px; justify-content: flex-start; max-width: none; }
+}
+
+    
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
       <h1>Contact</h1>
-      <p>Available by phone 09:00–17:00 CET, or send a message using the form below; a reply will follow as soon as possible.</p>
+      <p>Available by phone 09:00–17:00, or send a message using the form below; a reply will follow as soon as possible.</p>
     </header>
 
     <div class="grid">
@@ -331,23 +719,23 @@
           loading="lazy"
           allowfullscreen
           referrerpolicy="no-referrer-when-downgrade"
-          src="https://maps.google.com/maps?width=100%25&height=600&hl=en&coord=52.3007,5.6157&q=Mari%C3%ABnhoef%207%2C%203851%20ST%20Ermelo%2C%20Netherlands&z=12&output=embed">
+          src="https://maps.google.com/maps?q=2E%2C%20Nesanayanar%20Street%2C%20Samathanapuram%2C%20Tirunelveli%20627002&z=15&output=embed">
         </iframe>
         <div class="info">
           <div class="info-item">
             <div class="label">Address</div>
-            <div class="value">Mariënhoef 7, 3851 ST Ermelo, The Netherlands</div>
+            <div class="value">2E, Nesanayanar Street, Samathanapuram, Tirunelveli - 627002</div>
           </div>
           <div class="info-item">
             <div class="label">Email</div>
             <div class="value">
-              <a href="mailto:info@contentorgans.com">info@contentorgans.com</a>
+              <a href="mailto:info@contentorgans.com">Sales@cobtentorgans.in</a>
             </div>
           </div>
           <div class="info-item">
             <div class="label">Phone</div>
             <div class="value">
-              <a href="tel:+31341554876">+31 341 55 48 76</a>
+              <a href="tel:+31341554876">+91 9688647484</a>
             </div>
           </div>
           <div class="info-item">
@@ -358,6 +746,75 @@
       </aside>
     </div>
   </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <div class="logo-row">
+        <span class="logo-text">CONTENT</span>
+        <span class="logo-circle">C</span>
+      </div>
+      <div class="address">
+        <div>Content Organs India</div>
+        <div>2E, Nesanayanar Street, Samathanapuram,</div>
+        <div>Tirunelveli - 627002</div>
+      </div>
+      <div class="footer-contact">
+  <div class="contact-row">
+    <!-- Mail SVG Icon -->
+    <span class="icon-svg">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="6" width="28" height="20" rx="3" fill="none"/>
+        <polyline points="2,6 16,20 30,6" fill="none"/>
+      </svg>
+    </span>
+    <span>Sales@cobtentorgans.in</span>
+  </div>
+  <div class="contact-row">
+    <!-- Phone SVG Icon -->
+    <span class="icon-svg">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M24.55 20.85l-3.67-1.57a2 2 0 0 0-2.23.43l-1.06 1.05a15.9 15.9 0 0 1-7.18-7.18l1.05-1.06a2 2 0 0 0 .43-2.23L11.15 7.45a2 2 0 0 0-2.24-1l-2.66.67A2 2 0 0 0 4 9.1c.52 9 7.9 16.38 16.89 16.89a2 2 0 0 0 2-1.52l.67-2.66a2 2 0 0 0-1.01-2.24z" />
+</svg>
+
+    </span>
+    <span>+91 9688647484</span>
+  </div>
+</div>
+
+    </div>
+    <div class="footer-center">
+      <div class="footer-menu">
+        <div class="menu-col">
+          <div class="menu-item">Church organs <i class="fa fa-caret-down"></i></div>
+          <div class="menu-item">Home organs <i class="fa fa-caret-down"></i></div>
+          <div class="menu-item">Hauptwerk organs <i class="fa fa-caret-down"></i></div>
+          <div class="menu-item">Concert organs <i class="fa fa-caret-down"></i></div>
+
+
+        </div>
+        <div class="menu-col service-col">
+          <div class="menu-head">Service</div>
+          <div class="menu-item">Contact</div>
+          <div class="menu-item">About us</div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-map">
+  <div class="map-wrapper">
+    <iframe
+      class="map-iframe"
+      src="https://maps.google.com/maps?q=2E%2C%20Nesanayanar%20Street%2C%20Samathanapuram%2C%20Tirunelveli%20627002&z=15&output=embed"
+      style="border:0;"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+  </footer>
 
   <script>
     // Ensure floating labels work correctly with autofilled fields
