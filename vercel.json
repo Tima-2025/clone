@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "public": true,
+  "routes": [
+    { "src": "/$", "dest": "/home-page/index.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
