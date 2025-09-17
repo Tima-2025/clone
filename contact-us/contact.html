@@ -835,5 +835,49 @@
       toggle();
     });
   </script>
+   <script>
+    // Modern Mobile Navigation Handler (synced with home page)
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileToggle = document.getElementById('mobile-menu-toggle');
+      const mobileOverlay = document.getElementById('mobile-nav-overlay');
+      const mobileCloseBtn = document.getElementById('mobile-close-btn');
+      const body = document.body;
+
+      function openMobileMenu() {
+        if (!mobileOverlay) return;
+        mobileOverlay.classList.add('active');
+        if (mobileToggle) mobileToggle.setAttribute('aria-expanded', 'true');
+        body.style.overflow = 'hidden';
+        const firstLink = mobileOverlay.querySelector('.mobile-nav-link');
+        if (firstLink) setTimeout(() => firstLink.focus(), 100);
+      }
+
+      function closeMobileMenu() {
+        if (!mobileOverlay) return;
+        mobileOverlay.classList.remove('active');
+        if (mobileToggle) mobileToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+        if (mobileToggle) mobileToggle.focus();
+      }
+
+      function toggleMobileMenu(e) {
+        if (e) e.preventDefault();
+        const isOpen = mobileOverlay && mobileOverlay.classList.contains('active');
+        if (isOpen) closeMobileMenu(); else openMobileMenu();
+      }
+
+      if (mobileToggle) mobileToggle.addEventListener('click', toggleMobileMenu);
+      if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', function(e){ e.preventDefault(); closeMobileMenu(); });
+      if (mobileOverlay) mobileOverlay.addEventListener('click', function(e){ if (e.target === mobileOverlay) closeMobileMenu(); });
+
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && mobileOverlay && mobileOverlay.classList.contains('active')) closeMobileMenu(); });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', function(){ setTimeout(closeMobileMenu, 150); });
+      });
+
+      window.addEventListener('resize', function(){ if (window.innerWidth >= 769 && mobileOverlay && mobileOverlay.classList.contains('active')) closeMobileMenu(); });
+    });
+  </script>
 </body>
 </html>
